@@ -7,18 +7,20 @@ import {
   Megaphone, 
   Handshake, 
   Cpu, 
-  Users, 
-  UserRound, 
-  Trophy, 
   ArrowRight, 
   Facebook, 
   Linkedin, 
   Instagram, 
   ShieldCheck 
 } from 'lucide-react';
-
+import Navbar from './components/navbar';
 export default function Home() {
   const [activeSection, setActiveSection] = useState('marketing');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,13 +36,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto w-full">
-        <div className="logo">
-          <h1 className="text-3xl font-bold text-blue-900">actify</h1>
-        </div>
-        <button className="text-3xl text-blue-900">☰</button>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <div className="relative h-[800px] flex items-center justify-center text-center">
