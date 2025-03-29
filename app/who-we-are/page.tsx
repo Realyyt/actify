@@ -94,7 +94,7 @@ export default function WhoWeAre() {
         <div className="space-y-6 p-12">
           <h2 className="text-3xl font-bold text-navy-800 tracking-wide">COMPANY CULTURE</h2>
           <p className="text-gray-600 leading-relaxed">
-            At TRANZACT, we foster a culture of collaboration, innovation, and mutual respect. Our team-oriented environment encourages open communication, continuous learning, and celebrating each other's successes.
+            At TRANZACT, we foster a culture of collaboration, innovation, and mutual respect. Our team-oriented environment encourages open communication, continuous learning, and celebrating each other&apos;s successes.
           </p>
         </div>
       </section>
