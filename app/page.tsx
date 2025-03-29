@@ -18,9 +18,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('marketing');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,12 +62,12 @@ export default function Home() {
           <div className="text-teal-500 text-7xl">"</div>
           <div className="px-8 text-center">
             <p className="text-gray-700 text-xl md:text-2xl mb-8 leading-relaxed">
-              You never truly understand how significant of an impact you are making in people's lives until you get to speak with them and hear their stories.
+              You never truly understand how significant of an impact you are making in people&apos;s lives until you get to speak with them and hear their stories.
             </p>
             <p className="font-medium text-lg">Michael Preston</p>
             <p className="text-sm text-gray-600">Licensed Insurance Sales Professional</p>
           </div>
-          <div className="text-teal-500 text-7xl self-start">"</div>
+          <div className="text-teal-500 text-7xl self-start">&rdquo;</div>
         </div>
       </div>
 
