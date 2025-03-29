@@ -16,7 +16,7 @@ import {
 import Navbar from './components/navbar';
 export default function Home() {
   const [activeSection, setActiveSection] = useState('marketing');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
 
 
@@ -59,7 +59,7 @@ export default function Home() {
       {/* Testimonial Section */}
       <div className="py-48 flex justify-center bg-gray-50">
         <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-12 mx-4">
-          <div className="text-teal-500 text-7xl">"</div>
+          <div className="text-teal-500 text-7xl">&quot;</div>
           <div className="px-8 text-center">
             <p className="text-gray-700 text-xl md:text-2xl mb-8 leading-relaxed">
               You never truly understand how significant of an impact you are making in people&apos;s lives until you get to speak with them and hear their stories.
