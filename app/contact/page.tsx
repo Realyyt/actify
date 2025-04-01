@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import Link from "next/link"
+
 import Image from "next/image"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
@@ -43,14 +42,9 @@ export default function Contact() {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    // Reset form response
     setFormResponse(null)
-
-    // Set submitting state
     setIsSubmitting(true)
 
-    // Prepare form data
     const formData = {
       fullName: formState.fullName.value,
       email: formState.email.value,
@@ -60,28 +54,21 @@ export default function Contact() {
     }
 
     try {
-      // Submit form
       const response = await submitContactForm(formData)
 
       if (response.success) {
-        // Success
         setFormResponse({ success: true, message: response.message })
-        // Reset form
         setFormState(initialFormState)
       } else if (response.fieldErrors) {
-        // Field validation errors
         const newFormState = { ...formState }
-
         for (const [field, error] of Object.entries(response.fieldErrors)) {
           newFormState[field] = {
             value: formState[field]?.value || "",
             error,
           }
         }
-
         setFormState(newFormState)
       } else {
-        // General error
         setFormResponse({ success: false, message: response.message })
       }
     } catch (error) {
@@ -368,95 +355,12 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Beckley Office */}
-            <div className="bg-white border border-gray-200">
-              <div className="h-48 relative">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Beckley Office" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-navy-800 uppercase">Beckley</h3>
-                <p className="text-gray-600 uppercase mb-4">West Virginia</p>
-
-                <a href="tel:201.461.5665" className="text-teal-500 hover:underline block mb-2">
-                  201.461.5665
-                </a>
-                <p className="mb-1">221-B Business Street</p>
-                <p className="mb-4">Beckley, WV 25801</p>
-
-                <div className="flex justify-end">
-                  <MapPin className="text-orange-500" size={24} />
-                </div>
-              </div>
-            </div>
-
-            {/* Canton Office */}
-            <div className="bg-white border border-gray-200">
-              <div className="h-48 relative">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Canton Office" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-navy-800 uppercase">Canton</h3>
-                <p className="text-gray-600 uppercase mb-4">Ohio</p>
-
-                <a href="tel:866.807.9175" className="text-teal-500 hover:underline block mb-2">
-                  866.807.9175
-                </a>
-                <p className="mb-1">219 E Maple Street, Suite 2000</p>
-                <p className="mb-2">North Canton, OH 44720</p>
-                <a href="mailto:CAKrecruiting@tzinsurance.com" className="text-teal-500 hover:underline block mb-2">
-                  CAKrecruiting@tzinsurance.com
-                </a>
-
-                <div className="flex justify-end">
-                  <MapPin className="text-orange-500" size={24} />
-                </div>
-              </div>
-            </div>
-
-            {/* Lima Office */}
-            <div className="bg-white border border-gray-200">
-              <div className="h-48 relative">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Lima Office" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-navy-800 uppercase">Lima</h3>
-                <p className="text-gray-600 uppercase mb-4">Peru</p>
-
-                <a href="tel:+51914360838" className="text-teal-500 hover:underline block mb-2">
-                  +51 914 360 838
-                </a>
-                <p className="mb-1">Las Orquídeas 675, Floor 10 - 11</p>
-                <p className="mb-2">San Isidro, Lima, Perú - 15046</p>
-                <a href="mailto:LIMA_recruitment@tranzact.net" className="text-teal-500 hover:underline block mb-2">
-                  LIMA_recruitment@tranzact.net
-                </a>
-
-                <div className="flex justify-end">
-                  <MapPin className="text-orange-500" size={24} />
-                </div>
-              </div>
-            </div>
+            {/* Additional offices can be added here */}
           </div>
         </div>
-      </section>
-
-      <section className="grid grid-cols-1 md:grid-cols-2">
-        <Link
-          href="/contact"
-          className="bg-teal-500 py-20 flex items-center justify-center text-white font-bold tracking-wider text-xl"
-        >
-          <span>CONTACT US &gt;</span>
-        </Link>
-        <Link
-          href="/careers"
-          className="bg-purple-800 py-20 flex items-center justify-center text-white font-bold tracking-wider text-xl"
-        >
-          <span>JOIN OUR TEAM &gt;</span>
-        </Link>
       </section>
 
       <Footer />
     </div>
   )
 }
-

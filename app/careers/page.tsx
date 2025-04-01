@@ -3,19 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
-import {
-  ThumbsUp,
-  AtSign,
-  Monitor,
-  Target,
-  BarChart,
-  User,
-  Search,
-  Lightbulb,
-  Code,
-  Database,
-  FileText,
-} from "lucide-react"
+
 
 export default function WhatWeDo() {
   return (
@@ -35,12 +23,12 @@ export default function WhatWeDo() {
         </div>
         <div className="relative z-10 text-center max-w-4xl px-4 space-y-8">
           <h1 className="text-6xl font-bold text-white leading-tight animate-fade-in-up">
-            YOU'LL LOVE IT HERE
+            YOU&apos;LL LOVE IT HERE
           </h1>
           <div className="relative inline-block">
             <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-purple-600 blur opacity-75 animate-glow"></div>
             <p className="relative text-3xl font-medium text-white bg-black/50 px-6 py-3 rounded-lg backdrop-blur-sm animate-fade-in-up delay-100">
-              Let's build something meaningful together.
+              Let&apos;s build something meaningful together.
             </p>
           </div>
         </div>
