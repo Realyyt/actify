@@ -8,7 +8,6 @@ import {
   Handshake, 
   Cpu, 
   ArrowRight, 
-
 } from 'lucide-react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
@@ -16,27 +15,26 @@ import Footer from './components/footer';
 export default function Home() {
   const [activeSection, setActiveSection] = useState('marketing');
 
-
-
-
   return (
     <div className="min-h-screen flex flex-col">
       {/* Top Bar */}
-      <div className="bg-teal-500 text-white py-3 px-4 flex justify-center items-center flex-wrap gap-2">
-        <p className="mr-2 text-sm md:text-base">If you are already a SecureShield Insurance customer</p>
-        <Link href="/customer-login" className="bg-blue-900 text-white px-4 py-1 mx-2 rounded hover:bg-blue-800 transition-colors">
-          CLICK HERE
-        </Link>
-        <p className="mx-2 text-sm md:text-base">or call</p>
-        <Link href="tel:1-888-555-1234" className="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800 transition-colors">
-          1-888-555-1234
-        </Link>
+      <div className="bg-teal-500 text-white py-3 px-4 flex flex-col sm:flex-row justify-center items-center gap-2 text-center">
+        <p className="text-sm sm:text-base">If you are already a SecureShield Insurance customer</p>
+        <div className="flex items-center gap-2">
+          <Link href="/customer-login" className="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800 transition-colors text-sm sm:text-base">
+            CLICK HERE
+          </Link>
+          <p className="text-sm sm:text-base">or call</p>
+          <Link href="tel:1-888-555-1234" className="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800 transition-colors text-sm sm:text-base">
+            1-888-555-1234
+          </Link>
+        </div>
       </div>
 
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative h-[800px] flex items-center justify-center text-center">
+      <div className="relative h-[400px] sm:h-[600px] md:h-[800px] flex items-center justify-center text-center">
         <div className="absolute inset-0 z-0">
           <video 
             autoPlay
@@ -50,23 +48,23 @@ export default function Home() {
           </video>
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-white z-10 px-4 tracking-wide">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white z-10 px-4 tracking-wide">
           AUTHENTIC OUTCOMES FROM<br />AUTHENTIC INDIVIDUALS
         </h1>
       </div>
 
       {/* Testimonial Section */}
-      <div className="py-48 flex justify-center bg-gray-50">
-        <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-12 mx-4">
-          <div className="text-teal-500 text-7xl">&quot;</div>
-          <div className="px-8 text-center">
-            <p className="text-gray-700 text-xl md:text-2xl mb-8 leading-relaxed">
+      <div className="py-16 sm:py-32 md:py-48 flex justify-center bg-gray-50">
+        <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-4 sm:px-8 md:px-12 mx-4">
+          <div className="text-teal-500 text-4xl sm:text-5xl md:text-7xl">&quot;</div>
+          <div className="px-4 sm:px-6 md:px-8 text-center">
+            <p className="text-gray-700 text-base sm:text-xl md:text-2xl mb-4 sm:mb-8 leading-relaxed">
               You never truly understand how significant of an impact you are making in people&apos;s lives until you get to speak with them and hear their stories.
             </p>
-            <p className="font-medium text-lg">Michael Preston</p>
-            <p className="text-sm text-gray-600">Licensed Insurance Sales Professional</p>
+            <p className="font-medium text-base sm:text-lg">Michael Preston</p>
+            <p className="text-xs sm:text-sm text-gray-600">Licensed Insurance Sales Professional</p>
           </div>
-          <div className="text-teal-500 text-7xl self-start">&rdquo;</div>
+          <div className="text-teal-500 text-4xl sm:text-5xl md:text-7xl self-start">&rdquo;</div>
         </div>
       </div>
 
@@ -88,40 +86,40 @@ export default function Home() {
         
         <div className="relative z-10">
           {/* Tabs */}
-          <div className="flex text-center ">
+          <div className="flex flex-col sm:flex-row text-center">
             <div 
-              className={`w-1/3 py-10 px-4 cursor-pointer transition-colors ${activeSection === 'marketing' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
+              className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'marketing' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('marketing')}
             >
-              <h2 className="text-2xl">MARKETING</h2>
+              <h2 className="text-xl sm:text-2xl">MARKETING</h2>
             </div>
             <div 
-              className={`w-1/3 py-10 px-4 cursor-pointer transition-colors ${activeSection === 'sales' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
+              className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'sales' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('sales')}
             >
-              <h2 className="text-2xl">SALES</h2>
+              <h2 className="text-xl sm:text-2xl">SALES</h2>
             </div>
             <div 
-              className={`w-1/3 py-10 px-4 cursor-pointer transition-colors ${activeSection === 'technology' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
+              className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'technology' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('technology')}
             >
-              <h2 className="text-2xl">TECHNOLOGY</h2>
+              <h2 className="text-xl sm:text-2xl">TECHNOLOGY</h2>
             </div>
           </div>
 
           {/* Content based on active section */}
           {activeSection === 'marketing' && (
-            <div className="relative py-32 text-white">
+            <div className="relative py-16 sm:py-24 md:py-32 text-white">
               <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                <div className="mb-8">
-                  <Megaphone className="w-16 h-16 mx-auto" />
+                <div className="mb-4 sm:mb-8">
+                  <Megaphone className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
-                <h2 className="text-5xl mb-10 font-bold tracking-wide">MARKETING</h2>
-                <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">MARKETING</h2>
+                <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
                   We work across multiple marketing channels to <strong>generate leads</strong> for our partners and <strong>enhance brand recognition</strong> in the marketplace.
                 </p>
-                <div className="mt-12">
-                  <Link href="/marketing" className="bg-orange-500 text-white px-10 py-4 inline-block text-lg font-medium hover:bg-orange-600 transition-colors">
+                <div className="mt-8 sm:mt-12">
+                  <Link href="/marketing" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
                     LEARN MORE <ArrowRight className="inline-block ml-2" />
                   </Link>
                 </div>
@@ -130,17 +128,17 @@ export default function Home() {
           )}
 
           {activeSection === 'sales' && (
-            <div className="relative py-32 text-white">
+            <div className="relative py-16 sm:py-24 md:py-32 text-white">
               <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                <div className="mb-8">
-                  <Handshake className="w-16 h-16 mx-auto" />
+                <div className="mb-4 sm:mb-8">
+                  <Handshake className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
-                <h2 className="text-5xl mb-10 font-bold tracking-wide">SALES</h2>
-                <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">SALES</h2>
+                <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
                   Our sales professionals are dedicated to <strong>delivering exceptional results</strong> and building <strong>lasting relationships</strong> with our clients.
                 </p>
-                <div className="mt-12">
-                  <Link href="/sales" className="bg-orange-500 text-white px-10 py-4 inline-block text-lg font-medium hover:bg-orange-600 transition-colors">
+                <div className="mt-8 sm:mt-12">
+                  <Link href="/sales" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
                     LEARN MORE <ArrowRight className="inline-block ml-2" />
                   </Link>
                 </div>
@@ -149,11 +147,12 @@ export default function Home() {
           )}
 
           {activeSection === 'technology' && (
-            <div className="relative py-32 text-white">
+            <div className="relative py-16 sm:py-24 md:py-32 text-white">
               <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                <div className="mb-8">
-                  <Cpu className="w-16 h-16 mx-auto" />
+                <div className="mb-4 sm:mb-8">
+                  <Cpu className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">TECHNOLOGY</h2>
                 <h2 className="text-5xl mb-10 font-bold tracking-wide">TECHNOLOGY</h2>
                 <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed">
                   We leverage cutting-edge technology to <strong>streamline processes</strong> and <strong>drive innovation</strong> across all aspects of our business.
@@ -250,11 +249,11 @@ export default function Home() {
         <h2 className="text-blue-900 text-3xl mb-16 font-bold tracking-wide">TRANZACT BY THE NUMBERS</h2>
         <div className="flex justify-center items-center max-w-4xl mx-auto px-4">
           <div className="relative">
-            <Phone className="w-[250px] h-[450px]" />
+            <Phone className="w-[80px] h-[144px] sm:w-[150px] sm:h-[270px] md:w-[200px] md:h-[360px] lg:w-[250px] lg:h-[450px]" />
           </div>
-          <div className="text-purple-700 ml-8">
-            <div className="text-7xl font-bold">350,000+</div>
-            <div className="text-4xl mt-2">SALES</div>
+          <div className="text-purple-700 ml-4 sm:ml-8">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">350,000+</div>
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 sm:mt-2">SALES</div>
           </div>
         </div>
       </div>

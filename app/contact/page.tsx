@@ -86,24 +86,24 @@ export default function Contact() {
     <div className="who-we-are-container">
       <Navbar />
       <section
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative h-[50vh] md:h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/we.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <h1 className="relative z-10 text-5xl font-bold text-white text-center max-w-4xl px-4">
+        <h1 className="relative z-10 text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center max-w-4xl px-4">
           WE POWER GROWTH FOR LEADING INSURANCE COMPANIES
         </h1>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-12">
             {/* Left Column - Contact Info */}
-            <div className="lg:w-1/3">
-              <div className="mb-8">
-                <p className="text-gray-700 mb-4">Learn more about how TRANZACT can partner with your business.</p>
-                <p className="mb-2">
+            <div className="w-full lg:w-1/3">
+              <div className="mb-6 md:mb-8">
+                <p className="text-gray-700 mb-4 text-sm md:text-base">Learn more about how TRANZACT can partner with your business.</p>
+                <p className="mb-2 text-sm md:text-base">
                   Call{" "}
                   <a href="tel:201.461.5665" className="text-teal-500 hover:underline">
                     201.461.5665
@@ -113,7 +113,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-700 mb-2 text-sm md:text-base">
                   For media inquiries, email us at{" "}
                   <a href="mailto:press@tranzact.net" className="text-teal-500 hover:underline">
                     press@tranzact.net
@@ -127,12 +127,12 @@ export default function Contact() {
             </div>
 
             {/* Right Column - Form */}
-            <div className="lg:w-2/3">
+            <div className="w-full lg:w-2/3">
               {formResponse?.success ? (
-                <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded">
-                  <h3 className="text-xl font-bold mb-2">Thank You!</h3>
-                  <p>{formResponse.message}</p>
-                  <button className="mt-4 text-teal-600 hover:underline" onClick={() => setFormResponse(null)}>
+                <div className="bg-green-50 border border-green-200 text-green-800 p-4 md:p-6 rounded">
+                  <h3 className="text-lg md:text-xl font-bold mb-2">Thank You!</h3>
+                  <p className="text-sm md:text-base">{formResponse.message}</p>
+                  <button className="mt-4 text-teal-600 hover:underline text-sm md:text-base" onClick={() => setFormResponse(null)}>
                     Send another message
                   </button>
                 </div>
@@ -140,68 +140,68 @@ export default function Contact() {
                 <form onSubmit={handleSubmit}>
                   {/* Show general error message if any */}
                   {formResponse?.success === false && formResponse.message && (
-                    <div className="mb-6 bg-red-50 border border-red-200 text-red-800 p-4 rounded">
+                    <div className="mb-4 md:mb-6 bg-red-50 border border-red-200 text-red-800 p-3 md:p-4 rounded text-sm md:text-base">
                       {formResponse.message}
                     </div>
                   )}
 
-                  <div className="mb-6">
-                    <label htmlFor="fullName" className="block text-gray-600 uppercase text-sm mb-2">
+                  <div className="mb-4 md:mb-6">
+                    <label htmlFor="fullName" className="block text-gray-600 uppercase text-xs md:text-sm mb-1 md:mb-2">
                       Full Name
                     </label>
                     <input
                       type="text"
                       id="fullName"
-                      className={`w-full border ${formState.fullName.error ? "border-red-500" : "border-gray-300"} p-3 focus:outline-none focus:border-teal-500`}
+                      className={`w-full border ${formState.fullName.error ? "border-red-500" : "border-gray-300"} p-2 md:p-3 focus:outline-none focus:border-teal-500 text-sm md:text-base`}
                       value={formState.fullName.value}
                       onChange={(e) => updateField("fullName", e.target.value)}
                       required
                     />
                     {formState.fullName.error && (
-                      <p className="text-red-500 text-sm mt-1">{formState.fullName.error}</p>
+                      <p className="text-red-500 text-xs md:text-sm mt-1">{formState.fullName.error}</p>
                     )}
                   </div>
 
-                  <div className="mb-6">
-                    <label htmlFor="email" className="block text-gray-600 uppercase text-sm mb-2">
+                  <div className="mb-4 md:mb-6">
+                    <label htmlFor="email" className="block text-gray-600 uppercase text-xs md:text-sm mb-1 md:mb-2">
                       Email Address
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className={`w-full border ${formState.email.error ? "border-red-500" : "border-gray-300"} p-3 focus:outline-none focus:border-teal-500`}
+                      className={`w-full border ${formState.email.error ? "border-red-500" : "border-gray-300"} p-2 md:p-3 focus:outline-none focus:border-teal-500 text-sm md:text-base`}
                       value={formState.email.value}
                       onChange={(e) => updateField("email", e.target.value)}
                       required
                     />
-                    {formState.email.error && <p className="text-red-500 text-sm mt-1">{formState.email.error}</p>}
+                    {formState.email.error && <p className="text-red-500 text-xs md:text-sm mt-1">{formState.email.error}</p>}
                   </div>
 
-                  <div className="mb-6">
-                    <label htmlFor="phone" className="block text-gray-600 uppercase text-sm mb-2">
+                  <div className="mb-4 md:mb-6">
+                    <label htmlFor="phone" className="block text-gray-600 uppercase text-xs md:text-sm mb-1 md:mb-2">
                       Phone Number
                     </label>
                     <input
                       type="tel"
                       id="phone"
-                      className={`w-full border ${formState.phone.error ? "border-red-500" : "border-gray-300"} p-3 focus:outline-none focus:border-teal-500`}
+                      className={`w-full border ${formState.phone.error ? "border-red-500" : "border-gray-300"} p-2 md:p-3 focus:outline-none focus:border-teal-500 text-sm md:text-base`}
                       value={formState.phone.value}
                       onChange={(e) => updateField("phone", e.target.value)}
                     />
-                    {formState.phone.error && <p className="text-red-500 text-sm mt-1">{formState.phone.error}</p>}
+                    {formState.phone.error && <p className="text-red-500 text-xs md:text-sm mt-1">{formState.phone.error}</p>}
                   </div>
 
-                  <div className="mb-6 relative">
-                    <label htmlFor="topic" className="block text-gray-600 uppercase text-sm mb-2">
+                  <div className="mb-4 md:mb-6 relative">
+                    <label htmlFor="topic" className="block text-gray-600 uppercase text-xs md:text-sm mb-1 md:mb-2">
                       Topic
                     </label>
                     <div className="relative">
                       <div
-                        className={`w-full border ${formState.topic.error ? "border-red-500" : "border-gray-300"} p-3 flex justify-between items-center cursor-pointer`}
+                        className={`w-full border ${formState.topic.error ? "border-red-500" : "border-gray-300"} p-2 md:p-3 flex justify-between items-center cursor-pointer text-sm md:text-base`}
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                       >
                         <span>{formState.topic.value || "Select a topic"}</span>
-                        <ChevronDown size={20} />
+                        <ChevronDown size={18} className="shrink-0" />
                       </div>
 
                       {isDropdownOpen && (

@@ -104,7 +104,7 @@ export default function Leadership() {
   return (
     <div className="who-we-are-container">
       <Navbar />
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-[50vh] md:h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/lead.jpg"
@@ -115,38 +115,38 @@ export default function Leadership() {
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <h1 className="relative z-10 text-5xl font-bold text-white text-center max-w-4xl px-4">
+        <h1 className="relative z-10 text-3xl md:text-5xl font-bold text-white text-center max-w-4xl px-4">
           DRIVING EXCEPTIONAL PERFORMANCE
         </h1>
       </section>
 
       {/* Testimonial Section */}
-      <div className="py-48 flex justify-center bg-gray-50">
-        <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-12 mx-4">
-          <div className="text-teal-500 text-7xl">&quot;</div>
-          <div className="px-8 text-center">
-            <p className="text-gray-700 text-xl md:text-2xl mb-8 leading-relaxed">
+      <div className="py-24 md:py-48 flex justify-center bg-gray-50">
+        <div className="max-w-4xl flex border-l-2 md:border-l-4 border-r-2 md:border-r-4 border-teal-500 px-4 md:px-12 mx-4">
+          <div className="text-teal-500 text-4xl md:text-7xl">&quot;</div>
+          <div className="px-4 md:px-8 text-center">
+            <p className="text-gray-700 text-lg md:text-2xl mb-4 md:mb-8 leading-relaxed">
               What makes this role truly fulfilling is witnessing the moment clients understand their coverage is in
               place and their loved ones are safeguarded.
             </p>
-            <p className="font-medium text-lg">Sarah Thompson</p>
-            <p className="text-sm text-gray-600">Senior Insurance Consultant</p>
+            <p className="font-medium text-base md:text-lg">Sarah Thompson</p>
+            <p className="text-xs md:text-sm text-gray-600">Senior Insurance Consultant</p>
           </div>
-          <div className="text-teal-500 text-7xl self-start">&rdquo;</div>
+          <div className="text-teal-500 text-4xl md:text-7xl self-start">&rdquo;</div>
         </div>
       </div>
 
       {/* Leadership Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row">
             {/* Department Sidebar */}
             <div className="lg:w-1/4 mb-8 lg:mb-0">
-              <ul className="space-y-4 text-right pr-8">
+              <ul className="space-y-2 md:space-y-4 text-center md:text-right pr-0 md:pr-8">
                 {departments.map((dept) => (
                   <li key={dept.id}>
                     <button
-                      className={`text-sm font-medium ${
+                      className={`text-xs md:text-sm font-medium ${
                         selectedDepartment === dept.id ? "text-teal-500 font-bold" : "text-gray-700 hover:text-teal-500"
                       }`}
                       onClick={() => setSelectedDepartment(dept.id)}
@@ -160,14 +160,14 @@ export default function Leadership() {
 
             {/* Leaders Grid */}
             <div className="lg:w-3/4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {filteredLeaders.map((leader) => (
                   <div key={leader.id} className="flex flex-col">
                     <div className="relative aspect-[3/4] mb-2 overflow-hidden">
                       <Image src={leader.image || "/placeholder.svg"} alt={leader.name} fill className="object-cover" />
                     </div>
-                    <div className="bg-teal-500 text-white p-3 text-center">
-                      <h3 className="font-medium">{leader.name}</h3>
+                    <div className="bg-teal-500 text-white p-2 md:p-3 text-center">
+                      <h3 className="font-medium text-sm md:text-base">{leader.name}</h3>
                     </div>
                   </div>
                 ))}
@@ -177,24 +177,22 @@ export default function Leadership() {
         </div>
       </section>
 
-      <section className="grid grid-cols-2">
+      <section className="grid grid-cols-1 sm:grid-cols-2">
         <Link
           href="/contact"
-          className="bg-teal-500 py-20 flex items-center justify-center text-white font-bold tracking-wider text-xl"
+          className="bg-teal-500 py-12 md:py-20 flex items-center justify-center text-white font-bold tracking-wider text-lg md:text-xl"
         >
           <span>CONTACT US &gt;</span>
         </Link>
         <Link
           href="/careers"
-          className="bg-purple-800 py-20 flex items-center justify-center text-white font-bold tracking-wider text-xl"
+          className="bg-purple-800 py-12 md:py-20 flex items-center justify-center text-white font-bold tracking-wider text-lg md:text-xl"
         >
           <span>JOIN OUR TEAM &gt;</span>
         </Link>
       </section>
 
-
       <Footer />
     </div>
   )
 }
-
