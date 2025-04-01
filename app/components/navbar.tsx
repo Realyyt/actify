@@ -46,10 +46,10 @@ export default function Navbar() {
             <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               What We Do
             </Link>
-            <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+            <Link href="/leadership" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Leadership
             </Link>
-            <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+            <Link href="/careers" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Careers
             </Link>
             <Link href="/contact" className="text-white text-lg hover:text-teal-400 transition-colors py-2" onClick={toggleMenu}>

@@ -4,7 +4,7 @@ import Link from "next/link"
 import React from "react"
 import Footer from "../components/footer"
 import { ChevronLeft, ChevronRight, HandMetal, Heart, MessageSquare, PartyPopper, Target } from "lucide-react"
-
+import Navbar from "../components/navbar"
 export default function WhoWeAre() {
   const [activeCardIndex, setActiveCardIndex] = React.useState(2) // Start with BE UNSTOPPABLE as active
 
@@ -61,6 +61,7 @@ export default function WhoWeAre() {
 
   return (
     <div className="who-we-are-container">
+       <Navbar/>
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">

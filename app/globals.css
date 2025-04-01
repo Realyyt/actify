@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.clip-path-custom {
+    clip-path: path('M0,50 C50,0 150,100 100,50 C150,0 250,100 300,50 L300,100 L0,100 Z');
+  }
