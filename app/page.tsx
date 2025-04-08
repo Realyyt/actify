@@ -59,11 +59,9 @@ export default function Home() {
           <div className="text-teal-500 text-4xl sm:text-5xl md:text-7xl">&quot;</div>
           <div className="px-4 sm:px-6 md:px-8 text-center">
             <p className="text-gray-700 text-base sm:text-xl md:text-2xl mb-4 sm:mb-8 leading-relaxed">
-              You never truly understand how significant of an impact you are making in people&apos;s lives until you get to speak with them and hear their stories.
+              I was able to rebuild my life after a difficult loss—truly a lifeline during tough times.
             </p>
-            <p className="font-medium text-base sm:text-lg">Michael Preston</p>
-            <p className="text-xs sm:text-sm text-gray-600">Licensed Insurance Sales Professional</p>
-          </div>
+            </div>
           <div className="text-teal-500 text-4xl sm:text-5xl md:text-7xl self-start">&rdquo;</div>
         </div>
       </div>
@@ -91,13 +89,13 @@ export default function Home() {
               className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'marketing' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('marketing')}
             >
-              <h2 className="text-xl sm:text-2xl">MARKETING</h2>
+              <h2 className="text-xl sm:text-2xl">For Our Customers</h2>
             </div>
             <div 
               className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'sales' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('sales')}
             >
-              <h2 className="text-xl sm:text-2xl">SALES</h2>
+              <h2 className="text-xl sm:text-2xl">For Our Agents</h2>
             </div>
             <div 
               className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'technology' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
@@ -114,9 +112,9 @@ export default function Home() {
                 <div className="mb-4 sm:mb-8">
                   <Megaphone className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">MARKETING</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">CUSTOMERS</h2>
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
-                  We work across multiple marketing channels to <strong>generate leads</strong> for our partners and <strong>enhance brand recognition</strong> in the marketplace.
+                  Through various marketing channels, we strive to <strong>attract new leads</strong> and <strong>boost brand appeal</strong>, for our customers' success to yield.
                 </p>
                 <div className="mt-8 sm:mt-12">
                   <Link href="/marketing" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
@@ -133,9 +131,9 @@ export default function Home() {
                 <div className="mb-4 sm:mb-8">
                   <Handshake className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">SALES</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">AGENTS</h2>
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
-                  Our sales professionals are dedicated to <strong>delivering exceptional results</strong> and building <strong>lasting relationships</strong> with our clients.
+                  Our team is committed to <strong>supporting your success</strong> and fostering <strong>strong partnerships</strong> with our agents.
                 </p>
                 <div className="mt-8 sm:mt-12">
                   <Link href="/sales" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
@@ -172,7 +170,7 @@ export default function Home() {
       <div className="py-32 text-center bg-gray-50">
         <h2 className="text-blue-900 text-3xl mb-16 font-bold">OTHER COMPANIES WE WORK WITH</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl mx-auto px-8">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
+          {[1, 2, 3].map((index) => (
             <div key={index} className="flex justify-center items-center">
               <Image 
                 src={`/partner-${index}.svg`} 
@@ -184,18 +182,8 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-16">
-          <h3 className="text-blue-900 text-2xl mb-8 font-bold">NAMED</h3>
-          <div className="flex justify-center items-center flex-wrap gap-4">
-            <Image src="/partner-logo.svg" alt="Partner Logo" width={150} height={80} className="mx-4" />
-            <p className="text-blue-900 text-xl font-medium">PARTNER OF THE YEAR</p>
-          </div>
-          <div className="mt-10">
-            <Link href="/press-release" className="bg-blue-400 text-white px-8 py-3 inline-block hover:bg-blue-500 transition-colors">
-              PRESS RELEASE
-            </Link>
-          </div>
-        </div>
+        
+        
       </div>
 
       {/* Three-column section with team members */}
@@ -246,28 +234,24 @@ export default function Home() {
 
       {/* By the Numbers Section */}
       <div className="py-32 text-center bg-white">
-        <h2 className="text-blue-900 text-3xl mb-16 font-bold tracking-wide">TRANZACT BY THE NUMBERS</h2>
+        <h2 className="text-blue-900 text-3xl mb-16 font-bold tracking-wide">            <h1 className="text-3xl font-bold text-white hover:text-teal-400 transition-colors">Impact Delivery Group</h1>
+        BY THE NUMBERS</h2>
         <div className="flex justify-center items-center max-w-4xl mx-auto px-4">
           <div className="relative">
             <Phone className="w-[80px] h-[144px] sm:w-[150px] sm:h-[270px] md:w-[200px] md:h-[360px] lg:w-[250px] lg:h-[450px]" />
           </div>
           <div className="text-purple-700 ml-4 sm:ml-8">
-            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">350,000+</div>
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">50,000+</div>
             <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 sm:mt-2">SALES</div>
           </div>
         </div>
       </div>
 
       {/* Contact and Join Team Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-teal-500 text-white p-12 flex justify-center items-center group">
+      <div className="flex flex-row w-full">
+        <div className="bg-teal-500 text-white p-12 flex justify-center items-center w-full">
           <Link href="/contact-us" className="text-xl font-bold flex items-center">
-            CONTACT US <ArrowRight className="inline-block ml-2" />
-          </Link>
-        </div>
-        <div className="bg-purple-700 text-white p-12 flex justify-center items-center group">
-          <Link href="/join-our-team" className="text-xl font-bold flex items-center">
-            JOIN OUR TEAM <ArrowRight className="inline-block ml-2" />
+          Get Help from a Licensed Insurance Provider <ArrowRight className="inline-block ml-2" />
           </Link>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="flex flex-col px-8 py-6 max-w-7xl mx-auto w-full">
         <div className="flex justify-between items-center">
           <div className="logo">
-            <h1 className="text-3xl font-bold text-white hover:text-teal-400 transition-colors">actify</h1>
+            <h1 className="text-3xl font-bold text-white hover:text-teal-400 transition-colors">Impact Delivery Group</h1>
           </div>
           
           <button 
@@ -41,10 +41,13 @@ export default function Navbar() {
               </button>
             </div>
             <Link href="/who-we-are" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Who We Are
+              About Us
             </Link>
             <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               What We Do
+            </Link>
+            <Link href="/products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+              Our Products
             </Link>
             <Link href="/leadership" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Leadership

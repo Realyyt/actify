@@ -10,44 +10,28 @@ export default function WhoWeAre() {
 
   const cards = [
     {
-      title: "BE RESPONSIBLE",
-      description: "Own it all and don't blame others, take initiative and cause results.",
+      title: "Agents Thrive",
+      description: "IDG provides agents with cutting-edge tools, comprehensive training, and unparalleled support, enabling them to grow their careers while delivering exceptional service",
       color: "bg-teal-600",
       hoverColor: "hover:bg-teal-500",
       icon: <Target className="w-12 h-12 text-white" />,
       image: "/res.jpg", // Replace with actual image path
     },
     {
-      title: "BE FUN",
-      description: "Enjoy your work, enjoy being here, be committed and unattached to the company's success.",
+      title: "Clients Succeed",
+      description: "For clients, IDG is more than an insurance provider—it’s a partner dedicated to protecting their future, safeguarding their families, and helping them achieve lasting peace of mind.",
       color: "bg-amber-700",
       hoverColor: "hover:bg-amber-600",
       icon: <PartyPopper className="w-12 h-12 text-white" />,
-      image: "/fun.jpg", // Replace with actual image path
-    },
-    {
-      title: "BE UNSTOPPABLE",
-      description: "Have edge, make tough decisions, have a make it happen attitude.",
-      color: "bg-blue-700",
-      hoverColor: "hover:bg-blue-600",
-      icon: <HandMetal className="w-12 h-12 text-white" />,
       image: "/un.jpg", // Replace with actual image path
     },
     {
-      title: "BE DIRECT",
-      description: "Communicate powerfully, be engaged, straightforward and factual, listen and collaborate.",
-      color: "bg-purple-700",
-      hoverColor: "hover:bg-purple-600",
-      icon: <MessageSquare className="w-12 h-12 text-white" />,
-      image: "/drive.jpg", // Replace with actual image path
-    },
-    {
-      title: "BE PASSIONATE",
-      description: "Care deeply, strive to perform, love to win.",
-      color: "bg-green-700",
-      hoverColor: "hover:bg-green-600",
-      icon: <Heart className="w-12 h-12 text-white" />,
-      image: "/focus.jpg", // Replace with actual image path
+      title: "Together, We Make a Difference",
+      description: "By emphasizing personalized care and thoughtful guidance, IDG transforms insurance into a meaningful and impactful experience.",
+      color: "bg-blue-700",
+      hoverColor: "hover:bg-blue-600",
+      icon: <HandMetal className="w-12 h-12 text-white" />,
+      image: "/fun.jpg", // Replace with actual image path
     },
   ]
 
@@ -71,28 +55,16 @@ export default function WhoWeAre() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <h1 className="relative z-10 text-2xl md:text-5xl font-bold text-white text-center max-w-4xl px-4">
-          BIG COMPANY TALENT SMALL COMPANY CULTURE
+        At IDG Insurance Agency, innovation and empowerment take center stage.
         </h1>
       </section>
 
-      <div className="py-16 md:py-48 flex justify-center bg-gray-50">
-        <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-4 md:px-12 mx-4">
-          <div className="text-teal-500 text-4xl md:text-7xl">&quot;</div>
-          <div className="px-4 md:px-8 text-center">
-            <p className="text-gray-700 text-base md:text-xl lg:text-2xl mb-4 md:mb-8 leading-relaxed">
-              The most rewarding part of this job is seeing the relief on client&rsquo;s faces when they realize they&rsquo;re
-              protected and their families are secure.
-            </p>
-            <p className="font-medium text-base md:text-lg">Sarah Thompson</p>
-            <p className="text-xs md:text-sm text-gray-600">Senior Insurance Advisor</p>
-          </div>
-          <div className="text-teal-500 text-4xl md:text-7xl self-start">&rdquo;</div>
-        </div>
-      </div>
+     
+
 
       <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-center text-2xl md:text-4xl font-bold mb-8 md:mb-16 text-navy-800">The Actify Ethos: Authenticity in Action</h2>
+          <h2 className="text-center text-2xl md:text-4xl font-bold mb-8 md:mb-16 text-navy-800">Empowering Agents, Transforming Insurance</h2>
 
           <div className="md:hidden relative">
             <div className="flex items-center justify-center">
@@ -146,7 +118,7 @@ export default function WhoWeAre() {
             </div>
           </div>
 
-          <div className="hidden md:grid grid-cols-1 lg:grid-cols-5 gap-4">
+          <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-4">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -173,6 +145,19 @@ export default function WhoWeAre() {
               </div>
             ))}
           </div>
+
+          <div className="text-center m-12">
+            <p className="text-2xl font-bold text-indigo-500">
+              Are you ready to make a difference with IDG? Let’s lead the way!
+            </p>
+          </div>
+
+          <div className="text-center">
+            <a href="/contact" className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-lg shadow-md">
+              Get Help from a Licensed Insurance Provider
+            </a>
+          </div>
+
         </div>
       </section>
 
