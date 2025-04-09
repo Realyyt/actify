@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import Footer from "../components/footer"
-import { ChevronLeft, ChevronRight, HandMetal, Heart, MessageSquare, PartyPopper, Target } from "lucide-react"
+import { ChevronLeft, ChevronRight, HandMetal,  PartyPopper, Target } from "lucide-react"
 import Navbar from "../components/navbar"
 export default function WhoWeAre() {
   const [activeCardIndex, setActiveCardIndex] = React.useState(2)

@@ -664,7 +664,7 @@ export default function WhatWeDo() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Secure Your Future?</h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Whether you're looking for insurance coverage or a rewarding career, we're here to help you take the next step.
+            Whether you&apos;re looking for insurance coverage or a rewarding career, we&apos;re here to help you take the next step.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

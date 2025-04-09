@@ -114,7 +114,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">CUSTOMERS</h2>
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
-                  Through various marketing channels, we strive to <strong>attract new leads</strong> and <strong>boost brand appeal</strong>, for our customers' success to yield.
+                  Through various marketing channels, we strive to <strong>attract new leads</strong> and <strong>boost brand appeal</strong>, for our customers success to yield.
                 </p>
                 <div className="mt-8 sm:mt-12">
                   <Link href="/marketing" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
