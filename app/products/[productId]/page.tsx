@@ -250,6 +250,28 @@ const productDetails = {
       description: `Information about short-term medical plans, benefit ${i+1}`
     }))
   },
+  'supplemental-health': {
+    name: 'Supplemental Health Plans',
+    icon: <Users size={48} className="text-blue-600" />,
+    description: 'Additional coverage for specific health needs.',
+    about: 'Supplemental Health Plans are designed to complement your primary health insurance, offering additional coverage for specific health needs. These plans can include benefits for dental, vision, and other specialized services, providing a more comprehensive approach to your health care.',
+    features: [
+      'Customizable coverage options',
+      'Network of healthcare providers',
+      'Prescription drug coverage',
+      'Preventive care benefits'
+    ],
+    benefits: [
+      'Tailored coverage for your needs',
+      'Access to quality healthcare',
+      'Financial protection',
+      'Family coverage options'
+    ],
+    flyers: Array(30).fill(null).map((_, i) => ({
+      title: `Supplemental Health Flyer ${i+1}`,
+      description: `Information about supplemental health plans, benefit ${i+1}`
+    }))
+  },
   'medicare-supplement': {
     name: 'Medicare Supplement',
     icon: <Heart size={48} className="text-blue-600" />,
