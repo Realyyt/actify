@@ -44,13 +44,16 @@ export default function Navbar() {
               About Us
             </Link>
             <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              What We Do
+             What We Do, Our Approach, Why It Matters
             </Link>
             <Link href="/products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Our Products
+              Our Insurance Products
             </Link>
-            <Link href="/leadership" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Leadership
+            <Link href="/our-program-products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+              Our Program Products
+            </Link>
+            <Link href="/resources" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+              Resources
             </Link>
             <Link href="/careers" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Careers

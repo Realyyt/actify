@@ -18,18 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Top Bar */}
-      <div className="bg-teal-500 text-white py-3 px-4 flex flex-col sm:flex-row justify-center items-center gap-2 text-center">
-        <p className="text-sm sm:text-base">If you are already a SecureShield Insurance customer</p>
-        <div className="flex items-center gap-2">
-          <Link href="/customer-login" className="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800 transition-colors text-sm sm:text-base">
-            CLICK HERE
-          </Link>
-          <p className="text-sm sm:text-base">or call</p>
-          <Link href="tel:1-888-555-1234" className="bg-blue-900 text-white px-4 py-1 rounded hover:bg-blue-800 transition-colors text-sm sm:text-base">
-            1-888-555-1234
-          </Link>
-        </div>
-      </div>
+      
 
       <Navbar />
 

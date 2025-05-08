@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from 'react';
-import {  ChevronRight, Phone, Calendar, HelpCircle, Shield, Heart, Briefcase, Users } from 'lucide-react';
+import { ChevronRight, Phone, Calendar, HelpCircle, Shield, Heart, Briefcase, Users } from 'lucide-react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
+import Link from 'next/link';
 
-export default function ProductsPage() {
+export default function InsuranceProductsPage() {
   const [activeTab, setActiveTab] = useState('health');
 
   // Product image maps - in a real app these would be actual image imports
@@ -40,7 +41,7 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="bg-blue-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-6">Our Products</h1>
+          <h1 className="text-4xl font-bold mb-6">Our Insurance Products</h1>
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Securing Policies, Protecting Clients: We provide dedicated support to ensure the successful 
             completion of insurance applications and the issuance of policies. Protect your future today—choose 
@@ -151,17 +152,17 @@ export default function ProductsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {name: 'Accident Insurance', desc: 'Provides cash benefits for injuries or illnesses.'},
-                  {name: 'Affordable Care Act (ACA) Marketplace Plans', desc: 'Essential health benefits, including preventive care, prescription drugs, mental health services, and maternity care.'},
-                  {name: 'Critical Illness Insurance', desc: 'Offers financial relief for covered critical illnesses.'},
-                  {name: 'Dental & Vision', desc: 'Covers routine and comprehensive dental care.'},
-                  {name: 'Group Health Plans', desc: 'Includes self-funded and fully insured plans for businesses.'},
-                  {name: 'Individual & Family Health Plans', desc: 'Comprehensive Health Insurance.'},
-                  {name: 'Short-Term Medical Plans', desc: 'Temporary coverage for gaps in comprehensive insurance.'},
-                  {name: 'Supplemental Health Plans', desc: 'Options like cancer, disability, hospital indemnity, and vision coverage.'},
-                  {name: 'Medicare Supplement/Medigap Plan', desc: 'Cover gaps in Original Medicare, such as copayments, deductibles, and coinsurance.'},
-                  {name: 'Medicare Advantage Plan – MA Plan', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
-                  {name: 'Medicare Advantage Prescription Drug Plan – MA-PDP', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
-                  {name: 'Prescription Drug Plan – PDP', desc: 'Prescription drug plans to help cover the cost of medications.'}
+                  {name: 'aca-marketplace', desc: 'Essential health benefits, including preventive care, prescription drugs, mental health services, and maternity care.'},
+                  {name: 'critical-illness', desc: 'Offers financial relief for covered critical illnesses.'},
+                  {name: 'dental-vision', desc: 'Covers routine and comprehensive dental care.'},
+                  {name: 'group-health', desc: 'Includes self-funded and fully insured plans for businesses.'},
+                  {name: 'individual-family', desc: 'Comprehensive Health Insurance.'},
+                  {name: 'short-term-medical', desc: 'Temporary coverage for gaps in comprehensive insurance.'},
+                  {name: 'supplemental-health', desc: 'Options like cancer, disability, hospital indemnity, and vision coverage.'},
+                  {name: 'medicare-supplement', desc: 'Cover gaps in Original Medicare, such as copayments, deductibles, and coinsurance.'},
+                  {name: 'medicare-advantage', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
+                  {name: 'medicare-advantage-pdp', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
+                  {name: 'prescription-drug-plan', desc: 'Prescription drug plans to help cover the cost of medications.'}
                 ].map((product, index) => (
                   <div key={index} className="border rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow bg-white">
                     <div className="flex items-center mb-4">
@@ -172,14 +173,20 @@ export default function ProductsPage() {
                     </div>
                     <p className="text-gray-600 mb-4">{product.desc}</p>
                     <div className="flex gap-3 mt-4">
-                      <a href="#" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                      <Link
+                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                      >
                         <ChevronRight size={16} className="mr-1" />
                         Learn More
-                      </a>
-                      <a href="#" className="text-green-600 hover:text-green-800 font-medium flex items-center">
+                      </Link>
+                      <Link
+                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}#quote`}
+                        className="text-green-600 hover:text-green-800 font-medium flex items-center"
+                      >
                         <Calendar size={16} className="mr-1" />
                         Get a Quote
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -213,14 +220,20 @@ export default function ProductsPage() {
                     </div>
                     <p className="text-gray-600 mb-4">{product.desc}</p>
                     <div className="flex gap-3 mt-4">
-                      <a href="#" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                      <Link
+                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                      >
                         <ChevronRight size={16} className="mr-1" />
                         Learn More
-                      </a>
-                      <a href="#" className="text-green-600 hover:text-green-800 font-medium flex items-center">
+                      </Link>
+                      <Link
+                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}#quote`}
+                        className="text-green-600 hover:text-green-800 font-medium flex items-center"
+                      >
                         <Calendar size={16} className="mr-1" />
                         Get a Quote
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -250,10 +263,6 @@ export default function ProductsPage() {
                     ? 'Comprehensive coverage with essential health benefits and financial assistance options.'
                     : 'Affordable coverage for a specific term length with fixed premiums and death benefits.'}
                 </p>
-                <a href="#" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                  Learn more about this plan
-                  <ChevronRight size={16} className="ml-1" />
-                </a>
               </div>
             </div>
             
@@ -271,10 +280,6 @@ export default function ProductsPage() {
                     ? 'Protect your entire family with comprehensive coverage options designed for multi-person households.'
                     : 'Permanent protection with guaranteed death benefits and cash value accumulation over time.'}
                 </p>
-                <a href="#" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                  Learn more about this plan
-                  <ChevronRight size={16} className="ml-1" />
-                </a>
               </div>
             </div>
             
@@ -292,10 +297,6 @@ export default function ProductsPage() {
                     ? 'All-in-one Medicare coverage with additional benefits like vision, dental, and prescription drugs.'
                     : 'Flexible premium payments and adjustable death benefits with cash value growth potential.'}
                 </p>
-                <a href="#" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                  Learn more about this plan
-                  <ChevronRight size={16} className="ml-1" />
-                </a>
               </div>
             </div>
           </div>
@@ -311,14 +312,18 @@ export default function ProductsPage() {
             Get personalized advice and quotes today.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#" className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+            <button
+              className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
+            >
               <Phone size={20} className="mr-2" />
               Schedule a Call
-            </a>
-            <a href="#" className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+            </button>
+            <button
+              className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
+            >
               <HelpCircle size={20} className="mr-2" />
               Compare Plans
-            </a>
+            </button>
           </div>
         </div>
       </section>

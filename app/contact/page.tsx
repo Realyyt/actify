@@ -3,10 +3,10 @@
 import type React from "react"
 import { useState } from "react"
 
-import Image from "next/image"
+
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
-import { ChevronDown, MapPin, Loader2 } from "lucide-react"
+import { ChevronDown,  Loader2 } from "lucide-react"
 import { submitContactForm } from "../actions/contact-form"
 
 // Form field type
@@ -90,9 +90,14 @@ export default function Contact() {
         style={{ backgroundImage: "url('/we.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <h1 className="relative z-10 text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center max-w-4xl px-4">
-          WE POWER GROWTH FOR LEADING INSURANCE COMPANIES
-        </h1>
+        <div className="relative z-10 text-center max-w-4xl px-4 space-y-4 md:space-y-8">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Join the Movement: Aid to Trade for Lasting Prosperity
+          </h1>
+          <p className="text-lg md:text-xl text-white">
+            IDG is transforming development by shifting aid into market-driven, locally-led solutions that foster economic independence, sustainable growth, and resilient communities. By empowering leaders, strengthening systems, and aligning priorities, we ensure aid leads to long-term opportunity, not dependency. Join us in building a future where trade drives prosperity and development creates lasting impact.
+          </p>
+        </div>
       </section>
 
       {/* Contact Form Section */}
@@ -102,27 +107,30 @@ export default function Contact() {
             {/* Left Column - Contact Info */}
             <div className="w-full lg:w-1/3">
               <div className="mb-6 md:mb-8">
-                <p className="text-gray-700 mb-4 text-sm md:text-base">Learn more about how TRANZACT can partner with your business.</p>
-                <p className="mb-2 text-sm md:text-base">
-                  Call{" "}
-                  <a href="tel:201.461.5665" className="text-teal-500 hover:underline">
-                    201.461.5665
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p className="text-gray-700 mb-4 text-sm md:text-base">
+                  To learn more about Impact Delivery Group, LLC and explore partnership opportunities, Call{" "}
+                  <a href="tel:910.418.0181" className="text-teal-500 hover:underline">
+                    910.418.0181
                   </a>{" "}
-                  or complete this form.
+                  or complete the form below.
+                </p>
+                <p className="mb-2 text-sm md:text-base">
+                  For media inquiries, email us at{" "}
+                  <a href="mailto:wecanhelp@impactdeliverygroup.com" className="text-teal-500 hover:underline">
+                    wecanhelp@impactdeliverygroup.com
+                  </a>{" "}
+                  or call us at{" "}
+                  <a href="tel:910.418.0181" className="text-teal-500 hover:underline">
+                    910.418.0181
+                  </a>
                 </p>
               </div>
 
-              <div>
-                <p className="text-gray-700 mb-2 text-sm md:text-base">
-                  For media inquiries, email us at{" "}
-                  <a href="mailto:press@tranzact.net" className="text-teal-500 hover:underline">
-                    press@tranzact.net
-                  </a>{" "}
-                  or call us at{" "}
-                  <a href="tel:201.242.3702" className="text-teal-500 hover:underline">
-                    201.242.3702
-                  </a>
-                </p>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="font-bold text-gray-900 mb-2">Impact Delivery Group, LLC</h3>
+                <p className="text-gray-700">1457 Kelly Road, #245</p>
+                <p className="text-gray-700">Apex, NC 27502</p>
               </div>
             </div>
 
@@ -262,13 +270,13 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Our Offices Section */}
+      {/* Our Offices Section 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-navy-800 uppercase mb-12">Our Offices</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Fort Lee Office */}
+           
             <div className="bg-white border border-gray-200">
               <div className="h-48 relative">
                 <Image
@@ -294,7 +302,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Charlotte South Office */}
+         
             <div className="bg-white border border-gray-200">
               <div className="h-48 relative">
                 <Image
@@ -326,7 +334,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Charlotte North Office */}
+            
             <div className="bg-white border border-gray-200">
               <div className="h-48 relative">
                 <Image
@@ -355,10 +363,10 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Additional offices can be added here */}
+          
           </div>
         </div>
-      </section>
+      </section>*/}
 
       <Footer />
     </div>

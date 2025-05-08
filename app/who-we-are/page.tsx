@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Footer from "../components/footer"
 import { ChevronLeft, ChevronRight, HandMetal,  PartyPopper, Target } from "lucide-react"
 import Navbar from "../components/navbar"
+
 export default function WhoWeAre() {
   const [activeCardIndex, setActiveCardIndex] = React.useState(2)
 
@@ -19,7 +20,7 @@ export default function WhoWeAre() {
     },
     {
       title: "Clients Succeed",
-      description: "For clients, IDG is more than an insurance provider—it’s a partner dedicated to protecting their future, safeguarding their families, and helping them achieve lasting peace of mind.",
+      description: "For clients, IDG is more than an insurance provider—it's a partner dedicated to protecting their future, safeguarding their families, and helping them achieve lasting peace of mind.",
       color: "bg-amber-700",
       hoverColor: "hover:bg-amber-600",
       icon: <PartyPopper className="w-12 h-12 text-white" />,
@@ -43,6 +44,28 @@ export default function WhoWeAre() {
     setActiveCardIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1))
   }
 
+  const heroTexts = [
+    "At IDG Insurance Agency, innovation and empowerment take center stage.",
+    "Aid to Trade: Advancing Personal Protection, Quality Leadership, Local Ownership, Market-Based Solutions, and Sustainable Growth"
+  ];
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShow(false), 3000); // show for 3s
+    return () => clearTimeout(timeout);
+  }, [currentIdx]);
+
+  useEffect(() => {
+    if (!show) {
+      const timeout = setTimeout(() => {
+        setCurrentIdx((prev) => (prev + 1) % heroTexts.length);
+        setShow(true);
+      }, 500); // fade out for 0.5s
+      return () => clearTimeout(timeout);
+    }
+  }, [show, heroTexts.length]);
+
   return (
     <div className="who-we-are-container">
       <Navbar/>
@@ -54,12 +77,89 @@ export default function WhoWeAre() {
           </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <h1 className="relative z-10 text-2xl md:text-5xl font-bold text-white text-center max-w-4xl px-4">
-        At IDG Insurance Agency, innovation and empowerment take center stage.
-        </h1>
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+          <h1
+            className={`
+              text-white text-2xl md:text-5xl font-bold text-center max-w-4xl px-4 drop-shadow-lg transition-all duration-500
+              ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}
+            `}
+          >
+            {heroTexts[currentIdx]}
+          </h1>
+        </div>
       </section>
 
-     
+           {/* Aid to Trade Section */}
+           <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-1 rounded-full">OUR APPROACH</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mt-4 mb-6">
+                Aid to Trade: Advancing Personal Protection, Quality Leadership, Local Ownership, Market-Based Solutions, and Sustainable Growth
+              </h2>
+              <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-12 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-teal-100 rounded-full -mr-20 -mt-20 opacity-50"></div>
+              <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-100 rounded-full -ml-20 -mb-20 opacity-50"></div>
+              
+              <p className="text-gray-700 text-lg mb-8 relative z-10">
+                At Impact Delivery Group (IDG), Aid to Trade is more than a model—it&lsquo;s a strategy for long-term economic independence. By integrating personal protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 relative z-10">
+                <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-teal-500 text-white p-2 rounded-lg mr-3">1</span>
+                    Personal Protection
+                  </h3>
+                  <p className="text-gray-600">Safeguarding communities by ensuring equitable access to economic security, healthcare, and essential resources.</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-blue-500 text-white p-2 rounded-lg mr-3">2</span>
+                    Quality Leadership
+                  </h3>
+                  <p className="text-gray-600">Strengthening governance and institutional efficiency by embedding delivery units within organizations, governments, and institutions to drive high-impact initiatives.</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-teal-500 text-white p-2 rounded-lg mr-3">3</span>
+                    Local Ownership
+                  </h3>
+                  <p className="text-gray-600">Empowering communities as architects of their development futures – ensuring solutions reflect local needs, priorities, and expertise.</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-blue-500 text-white p-2 rounded-lg mr-3">4</span>
+                    Market-Based Solutions
+                  </h3>
+                  <p className="text-gray-600">Investing in enterprise-driven approaches that foster self-sufficiency, private-sector growth, and economic resilience.</p>
+                </div>
+              </div>
+
+              <div className="mt-8 bg-gradient-to-r from-teal-500 to-blue-500 p-6 rounded-xl text-white relative z-10">
+                <h3 className="text-xl font-semibold mb-3 flex items-center">
+                  <span className="bg-white text-teal-500 p-2 rounded-lg mr-3">5</span>
+                  Sustainable Growth
+                </h3>
+                <p className="text-white/90">Moving beyond short-term aid by building stronger systems that enable lasting prosperity through trade, investment, and innovation.</p>
+              </div>
+
+              <div className="mt-8 text-center relative z-10">
+                <p className="text-gray-700 text-lg italic">
+                  True development requires bold leadership, local engagement, and systems that sustain impact beyond aid dependency. Aid to Trade is how we turn assistance into opportunity—ensuring communities lead, markets thrive, and solutions endure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       <section className="py-10 md:py-20 bg-white">
@@ -148,7 +248,7 @@ export default function WhoWeAre() {
 
           <div className="text-center m-12">
             <p className="text-2xl font-bold text-indigo-500">
-              Are you ready to make a difference with IDG? Let’s lead the way!
+              Are you ready to make a difference with IDG? Let&lsquo;s lead the way!
             </p>
           </div>
 
@@ -160,6 +260,8 @@ export default function WhoWeAre() {
 
         </div>
       </section>
+
+
 
       {/* Health and Wellness Section */}
       <section className="grid grid-cols-1 md:grid-cols-2">
