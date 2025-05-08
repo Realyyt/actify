@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
-import { Shield, Heart, Briefcase, Users, Calendar, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Shield, Heart, Briefcase, Users, Calendar, Download, ChevronLeft, ChevronRight ,Pill} from 'lucide-react';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
 import QuoteForm from '../../components/QuoteForm';
@@ -272,30 +272,8 @@ const productDetails = {
       description: `Information about supplemental health plans, benefit ${i+1}`
     }))
   },
-  'medicare-supplement': {
-    name: 'Medicare Supplement',
-    icon: <Heart size={48} className="text-blue-600" />,
-    description: 'Additional coverage to complement Original Medicare.',
-    about: 'Medicare Supplement (Medigap) plans help pay for out-of-pocket costs not covered by Original Medicare, such as copayments, coinsurance, and deductibles. These plans offer peace of mind and financial protection for seniors, allowing you to see any doctor that accepts Medicare. Standardized plan options make it easy to compare and choose the right coverage for your needs.',
-    features: [
-      'Coverage for Medicare gaps',
-      'Standardized plan options',
-      'Guaranteed renewable',
-      'Nationwide coverage'
-    ],
-    benefits: [
-      'Reduced out-of-pocket costs',
-      'Freedom to choose providers',
-      'Comprehensive coverage',
-      'Peace of mind'
-    ],
-    flyers: Array(30).fill(null).map((_, i) => ({
-      title: `Medicare Supplement Flyer ${i+1}`,
-      description: `Information about Medicare supplement plans, benefit ${i+1}`
-    }))
-  },
-  'medicare-advantage': {
-    name: 'Medicare Advantage',
+  'medicare-advantage-pdp': {
+    name: 'Medicare Advantage PDP',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'All-in-one alternative to Original Medicare.',
     about: 'Medicare Advantage plans (Part C) combine hospital, medical, and often prescription drug coverage into a single plan. These plans may offer additional benefits such as dental, vision, hearing, and wellness programs, providing a comprehensive solution for seniors. Medicare Advantage plans are offered by private insurers and may include extra perks like fitness memberships and care coordination services.',
@@ -314,6 +292,28 @@ const productDetails = {
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Medicare Advantage Flyer ${i+1}`,
       description: `Information about Medicare Advantage plans, benefit ${i+1}`
+    }))
+  },
+  'prescription-drug-plan': {
+    name: 'Prescription Drug Plan',
+    icon: <Pill size={48} className="text-blue-600" />,
+    description: 'Coverage for prescription medications.',
+    about: 'Prescription Drug Plans (Part D) provide coverage for prescription medications, helping to reduce the cost of medications for Medicare beneficiaries. These plans are offered by private insurers and may have different formularies, copays, and deductibles.',
+    features: [
+      'Coverage for prescription medications',
+      'Variety of plans to choose from',
+      'Helps reduce medication costs',
+      'May include additional benefits'
+    ],
+    benefits: [
+      'Reduced medication costs',
+      'Access to a wide range of medications',
+      'Flexibility in plan selection',
+      'May include additional health benefits'
+    ],
+    flyers: Array(30).fill(null).map((_, i) => ({
+      title: `Prescription Drug Plan Flyer ${i+1}`,
+      description: `Information about Prescription Drug Plans, benefit ${i+1}`
     }))
   }
 };
@@ -355,9 +355,12 @@ function FlyersSection({ flyers }: { flyers: { title: string, description: strin
               key={index} 
               className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
-              {/* Placeholder image - replace with actual image links */}
-              <div className="bg-gray-200 w-full h-48 mb-4 rounded flex items-center justify-center">
-                <img src={`/api/placeholder/400/300`} alt={flyer.title} className="max-h-full" />
+              {/* Plain colored background */}
+              <div 
+                className="w-full h-48 mb-4 rounded flex items-center justify-center"
+                style={{ backgroundColor: `hsl(${index * 30}, 50%, 80%)` }} // Generates different colors
+              >
+                
               </div>
               
               <h3 className="text-lg font-semibold text-blue-800 mb-2">{flyer.title}</h3>
