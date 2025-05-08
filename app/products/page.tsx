@@ -61,7 +61,7 @@ export default function InsuranceProductsPage() {
               Life Insurance
             </button>
           </div>
-          <a href="#help" className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+          <a href="/contact" className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
             <Phone size={20} className="mr-2" />
             Get Help from a Licensed Insurance Provider
           </a>
@@ -308,13 +308,13 @@ export default function InsuranceProductsPage() {
               className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
             >
               <Phone size={20} className="mr-2" />
-              Schedule a Call
+              <a href='/contact'>Schedule a Call</a>
             </button>
             <button
               className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
             >
               <HelpCircle size={20} className="mr-2" />
-              Compare Plans
+              <a href='/contact'>Compare Plans</a>
             </button>
           </div>
         </div>

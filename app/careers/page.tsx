@@ -138,10 +138,10 @@ export default function WhatWeDo() {
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={`/careers/${position.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-teal-500 hover:text-teal-600 font-medium">
+                  <Link href="/contact" className="text-teal-500 hover:text-teal-600 font-medium">
                     Learn More
                   </Link>
-                  <Link href="/careers/apply" className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition-colors">
+                  <Link href="/contact" className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition-colors">
                     APPLY HERE
                   </Link>
                 </div>
