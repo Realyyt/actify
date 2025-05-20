@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
-import { Shield, Heart, Briefcase, Users, Calendar, Download, ChevronLeft, ChevronRight ,Pill} from 'lucide-react';
+import { Shield, Heart, Briefcase, Users, Calendar, Download, ChevronLeft, ChevronRight, Pill } from 'lucide-react';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
 import QuoteForm from '../../components/QuoteForm';
@@ -13,19 +13,6 @@ const productDetails = {
     name: 'Accident Insurance',
     icon: <Shield size={48} className="text-blue-600" />,
     description: 'Provides cash benefits for injuries or illnesses.',
-    about: 'Accident Insurance helps you cover unexpected medical costs and lost income due to accidental injuries. It is designed to supplement your primary health insurance and provide peace of mind in case of unforeseen events. This plan is ideal for individuals and families seeking extra protection against the financial impact of accidents.',
-    features: [
-      '24/7 coverage for accidents',
-      'Cash benefits for medical expenses',
-      'No health questions required',
-      'Flexible coverage options'
-    ],
-    benefits: [
-      'Immediate financial support after accidents',
-      'Supplemental coverage to your existing insurance',
-      'Easy claims process',
-      'Affordable premiums'
-    ],
     flyers: [
       { title: 'Accident Coverage Overview', description: 'A comprehensive guide to our accident insurance plans' },
       { title: 'Family Protection Plan', description: 'How accident insurance protects your entire family' },
@@ -63,19 +50,6 @@ const productDetails = {
     name: 'ACA Marketplace Plans',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'Comprehensive health coverage through the Affordable Care Act marketplace.',
-    about: 'ACA Marketplace Plans are designed to provide individuals and families with access to affordable, comprehensive health insurance. These plans cover essential health benefits, including preventive care, emergency services, and prescription drugs. With subsidies available for those who qualify, ACA Marketplace Plans help reduce the cost of coverage and ensure that everyone has access to the care they need. Open enrollment periods and special enrollment options make it easy to sign up for coverage that fits your needs and budget.',
-    features: [
-      'Essential health benefits coverage',
-      'Preventive care at no cost',
-      'No pre-existing condition exclusions',
-      'Subsidies available for qualifying individuals'
-    ],
-    benefits: [
-      'Comprehensive coverage for medical needs',
-      'Access to a wide network of healthcare providers',
-      'Financial assistance options',
-      'Guaranteed coverage regardless of health status'
-    ],
     flyers: [
       { title: 'ACA Enrollment Guide', description: 'Step-by-step instructions for marketplace enrollment' },
       { title: 'Subsidy Qualification', description: 'Find out if you qualify for financial assistance' },
@@ -109,24 +83,10 @@ const productDetails = {
       { title: 'Marketplace Mobile App Guide', description: 'Managing your coverage on your phone' }
     ]
   },
-  // I'll add just two more examples and abbreviate the rest for readability
   'critical-illness': {
     name: 'Critical Illness Insurance',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'Provides financial protection against major illnesses.',
-    about: 'Critical Illness Insurance offers a lump-sum payment if you are diagnosed with a covered serious illness, such as cancer, heart attack, or stroke. This benefit can be used for any purpose, including medical bills, travel for treatment, or everyday living expenses. It is designed to ease the financial burden during a difficult time, allowing you to focus on recovery rather than costs. This coverage is ideal for those who want extra security in the face of life-changing health events.',
-    features: [
-      'Lump-sum benefit payment',
-      'Coverage for major illnesses',
-      'No restrictions on benefit usage',
-      'Flexible coverage amounts'
-    ],
-    benefits: [
-      'Financial support during treatment',
-      'Helps cover non-medical expenses',
-      'Peace of mind during recovery',
-      'Supplemental to existing health coverage'
-    ],
     flyers: [
       { title: 'Critical Illness Overview', description: 'Understanding critical illness insurance' },
       { title: 'Covered Conditions List', description: 'Illnesses covered by your policy' },
@@ -138,7 +98,6 @@ const productDetails = {
       { title: 'Family Coverage Options', description: 'Protecting your loved ones' },
       { title: 'Benefit Usage Ideas', description: 'How to utilize your lump-sum payment' },
       { title: 'Recovery Support Services', description: 'Additional resources for recovery' },
-      // Abbreviated for readability - in real implementation, add all 30
       { title: 'Coverage Amounts Guide', description: 'Selecting the right benefit amount' },
       { title: 'Critical Illness Statistics', description: 'Understanding your risk factors' },
       { title: 'Premium Calculation', description: 'How your rate is determined' },
@@ -165,42 +124,15 @@ const productDetails = {
     name: 'Dental & Vision',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Comprehensive dental and vision coverage for individuals and families.',
-    about: 'Dental & Vision plans help you maintain your oral and eye health with coverage for routine exams, cleanings, and corrective lenses. These plans often include benefits for major dental procedures, orthodontics, and a wide selection of eyewear. Regular dental and vision care is essential for overall health, and these plans make it affordable and convenient for you and your family to access quality care.',
-    features: [
-      'Preventive care coverage',
-      'Major dental procedures included',
-      'Vision exams and eyewear benefits',
-      'Family coverage options'
-    ],
-    benefits: [
-      'Maintain oral and eye health',
-      'Save on routine check-ups',
-      'Coverage for unexpected dental issues',
-      'Access to quality vision care'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Dental & Vision Flyer ${i+1}`,
       description: `Information about dental and vision coverage, benefit ${i+1}`
     }))
   },
-  // For the rest of the products, I'm using a more programmatic approach for brevity
   'group-health': {
     name: 'Group Health Plans',
     icon: <Briefcase size={48} className="text-blue-600" />,
     description: 'Comprehensive health coverage for businesses and organizations.',
-    about: 'Group Health Plans are tailored for businesses and organizations that want to provide health insurance to their employees. These plans can be customized to fit the size and needs of your workforce, offering a range of coverage options and wellness programs. Group plans help attract and retain top talent, improve employee satisfaction, and may offer tax advantages for employers. Administrative support and cost-sharing options make managing employee benefits easier and more efficient.',
-    features: [
-      'Customizable plan options',
-      'Employee wellness programs',
-      'Administrative support',
-      'Cost-sharing options'
-    ],
-    benefits: [
-      'Attract and retain top talent',
-      'Tax advantages for businesses',
-      'Comprehensive coverage for employees',
-      'Simplified administration'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Group Health Flyer ${i+1}`,
       description: `Information about group health plans, benefit ${i+1}`
@@ -210,19 +142,6 @@ const productDetails = {
     name: 'Individual & Family Health Plans',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Personalized health coverage for individuals and families.',
-    about: 'Individual & Family Health Plans are designed for people who do not have access to employer-sponsored insurance. These plans offer a variety of coverage options, including preventive care, prescription drugs, and specialist visits. You can tailor your plan to fit your health needs and budget, ensuring peace of mind for you and your loved ones. Flexible enrollment options and a wide provider network make these plans a great choice for many households.',
-    features: [
-      'Customizable coverage options',
-      'Network of healthcare providers',
-      'Prescription drug coverage',
-      'Preventive care benefits'
-    ],
-    benefits: [
-      'Tailored coverage for your needs',
-      'Access to quality healthcare',
-      'Financial protection',
-      'Family coverage options'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Individual & Family Flyer ${i+1}`,
       description: `Information about individual and family plans, benefit ${i+1}`
@@ -232,19 +151,6 @@ const productDetails = {
     name: 'Short-Term Medical Plans',
     icon: <Calendar size={48} className="text-blue-600" />,
     description: 'Temporary health coverage for specific time periods.',
-    about: 'Short-Term Medical Plans provide temporary health insurance for individuals who are between jobs, waiting for other coverage to begin, or need a flexible, budget-friendly option. These plans offer basic coverage for a limited period, helping you bridge gaps in your health insurance. They are ideal for those in transition or who need immediate coverage for unexpected situations.',
-    features: [
-      'Flexible coverage duration',
-      'Quick approval process',
-      'Basic medical coverage',
-      'Affordable premiums'
-    ],
-    benefits: [
-      'Immediate coverage availability',
-      'Bridge coverage gaps',
-      'Budget-friendly option',
-      'Flexible terms'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Short-Term Medical Flyer ${i+1}`,
       description: `Information about short-term medical plans, benefit ${i+1}`
@@ -254,19 +160,6 @@ const productDetails = {
     name: 'Supplemental Health Plans',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Additional coverage for specific health needs.',
-    about: 'Supplemental Health Plans are designed to complement your primary health insurance, offering additional coverage for specific health needs. These plans can include benefits for dental, vision, and other specialized services, providing a more comprehensive approach to your health care.',
-    features: [
-      'Customizable coverage options',
-      'Network of healthcare providers',
-      'Prescription drug coverage',
-      'Preventive care benefits'
-    ],
-    benefits: [
-      'Tailored coverage for your needs',
-      'Access to quality healthcare',
-      'Financial protection',
-      'Family coverage options'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Supplemental Health Flyer ${i+1}`,
       description: `Information about supplemental health plans, benefit ${i+1}`
@@ -276,19 +169,6 @@ const productDetails = {
     name: 'Medicare Advantage PDP',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'All-in-one alternative to Original Medicare.',
-    about: 'Medicare Advantage plans (Part C) combine hospital, medical, and often prescription drug coverage into a single plan. These plans may offer additional benefits such as dental, vision, hearing, and wellness programs, providing a comprehensive solution for seniors. Medicare Advantage plans are offered by private insurers and may include extra perks like fitness memberships and care coordination services.',
-    features: [
-      'Combined Part A and B coverage',
-      'Additional benefits included',
-      'Prescription drug coverage',
-      'Network-based plans'
-    ],
-    benefits: [
-      'Comprehensive coverage',
-      'Additional benefits',
-      'Cost-effective option',
-      'Coordinated care'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Medicare Advantage Flyer ${i+1}`,
       description: `Information about Medicare Advantage plans, benefit ${i+1}`
@@ -298,19 +178,6 @@ const productDetails = {
     name: 'Prescription Drug Plan',
     icon: <Pill size={48} className="text-blue-600" />,
     description: 'Coverage for prescription medications.',
-    about: 'Prescription Drug Plans (Part D) provide coverage for prescription medications, helping to reduce the cost of medications for Medicare beneficiaries. These plans are offered by private insurers and may have different formularies, copays, and deductibles.',
-    features: [
-      'Coverage for prescription medications',
-      'Variety of plans to choose from',
-      'Helps reduce medication costs',
-      'May include additional benefits'
-    ],
-    benefits: [
-      'Reduced medication costs',
-      'Access to a wide range of medications',
-      'Flexibility in plan selection',
-      'May include additional health benefits'
-    ],
     flyers: Array(30).fill(null).map((_, i) => ({
       title: `Prescription Drug Plan Flyer ${i+1}`,
       description: `Information about Prescription Drug Plans, benefit ${i+1}`
@@ -452,48 +319,7 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-10">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">About this product</h2>
-          <p className="text-lg text-gray-700">{product.about}</p>
-        </div>
-      </section>
-
-      {/* Product Details */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Features */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Key Features</h2>
-              <ul className="space-y-4">
-                {product.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="text-green-500 mt-1">•</div>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Benefits */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Benefits</h2>
-              <ul className="space-y-4">
-                {product.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="text-green-500 mt-1">•</div>
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Flyers Section - This is the new section */}
+      {/* Flyers Section */}
       <FlyersSection flyers={product.flyers} />
 
       {/* Quote Form */}

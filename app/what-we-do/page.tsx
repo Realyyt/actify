@@ -11,7 +11,8 @@ import {
 
   Mail,
   BarChart2,
-  Globe2
+  Globe2,
+  Wallet
 } from "lucide-react"
 
 export default function WhatWeDo() {
@@ -56,7 +57,7 @@ export default function WhatWeDo() {
             <span className="inline-block w-24 h-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500"></span>
           </div>
           <p className="text-xl md:text-2xl text-gray-700 font-semibold mb-8 drop-shadow-lg bg-white/70 rounded-xl px-6 py-4 inline-block shadow-lg">
-            At Impact Delivery Group (IDG), we turn aid into trade by fostering economic independence through personal protection, quality leadership, market-based solutions, and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
+            At Impact Delivery Group (IDG), we turn aid into trade by fostering economic independence through personal protection, quality leadership,locally-led initiatives,market-based solutions,access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
           </p>
         </div>
       </section>
@@ -97,6 +98,15 @@ export default function WhatWeDo() {
                 Empowering communities as architects of their own futures, ensuring solutions are tailored to local priorities, shaped by regional expertise, and powered by shared investment.
               </p>
             </div>
+            <div className="flex flex-col items-center text-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-purple-500">
+              <div className="bg-purple-500 text-white p-4 rounded-full mb-4 shadow-lg">
+                <Wallet size={32} />
+              </div>
+              <h3 className="text-xl font-semibold text-navy-800 mb-2">Access to Capital</h3>
+              <p className="text-gray-600">
+                Expanding financial access through government grants, private-sector investment and public-private partnerships foster innovation ,job-creation and institutional growth. Strengthening financial inclusion ensures sustainable economic developent and long-term resilience.
+              </p>
+            </div>
             <div className="flex flex-col items-center text-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-green-600">
               <div className="bg-green-600 text-white p-4 rounded-full mb-4 shadow-lg">
                 <Briefcase size={32} />
@@ -134,7 +144,7 @@ export default function WhatWeDo() {
             We collaborate with governments, businesses, and institutions to transform aid into opportunity, aligning global resources with local leadership to deliver lasting impact. Development must be owned, driven, and sustained by communities—not just received.
           </p>
           <p className="text-2xl font-bold text-teal-700 italic bg-white/80 rounded-xl px-6 py-4 inline-block shadow-md">
-            At IDG, Aid to Trade is more than a strategy it&lsquo;s a commitment to lasting change.
+            At IDG, Aid to Trade is more than a strategy; it&lsquo;s a commitment to lasting change.
           </p>
         </div>
       </section>

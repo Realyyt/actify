@@ -45,8 +45,8 @@ export default function WhoWeAre() {
   }
 
   const heroTexts = [
-    "At IDG Insurance Agency, innovation and empowerment take center stage.",
-    "Aid to Trade: Advancing Personal Protection, Quality Leadership, Local Ownership, Market-Based Solutions, and Sustainable Growth"
+    "At IDG , innovation and empowerment take center stage.",
+    "Aid to Trade: Advancing Personal Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions, Sustainable Growth"
   ];
   const [currentIdx, setCurrentIdx] = useState(0);
   const [show, setShow] = useState(true);
@@ -96,7 +96,7 @@ export default function WhoWeAre() {
             <div className="text-center mb-12">
               <span className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-1 rounded-full">OUR APPROACH</span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mt-4 mb-6">
-                Aid to Trade: Advancing Personal Protection, Quality Leadership, Local Ownership, Market-Based Solutions, and Sustainable Growth
+              Aid to Trade: Advancing Personal Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions and Sustainable Growth
               </h2>
               <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
             </div>
@@ -146,9 +146,9 @@ export default function WhoWeAre() {
               <div className="mt-8 bg-gradient-to-r from-teal-500 to-blue-500 p-6 rounded-xl text-white relative z-10">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="bg-white text-teal-500 p-2 rounded-lg mr-3">5</span>
-                  Sustainable Growth
+                  Access to Capital
                 </h3>
-                <p className="text-white/90">Moving beyond short-term aid by building stronger systems that enable lasting prosperity through trade, investment, and innovation.</p>
+                <p className="text-white/90">Expanding financial access through government support , private investment and patnerships foster innovation , job creation anad sustainable economic growth</p>
               </div>
 
               <div className="mt-8 text-center relative z-10">
@@ -263,7 +263,7 @@ export default function WhoWeAre() {
 
 
 
-      {/* Health and Wellness Section */}
+      {/* Health and Wellness Section 
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="space-y-4 p-6 md:p-12">
           <h2 className="text-2xl md:text-3xl font-bold text-navy-800 tracking-wide">HEALTH AND WELLNESS</h2>
@@ -280,7 +280,7 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-      {/* Career Development Section */}
+     
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative h-[300px] md:h-[600px]">
           <Image src="/w2.jpg" alt="Employee working on career development" layout="fill" objectFit="cover" />
@@ -294,7 +294,7 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-      {/* Work-Life Balance Section */}
+    
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="space-y-4 p-6 md:p-12">
           <h2 className="text-2xl md:text-3xl font-bold text-navy-800 tracking-wide">WORK-LIFE BALANCE</h2>
@@ -308,7 +308,7 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-      {/* Company Culture Section */}
+     
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative h-[300px] md:h-[600px]">
           <Image src="/w.jpg" alt="Team collaborating in a modern office space" layout="fill" objectFit="cover" />
@@ -320,9 +320,9 @@ export default function WhoWeAre() {
             environment encourages open communication, continuous learning, and celebrating each other&apos;s successes.
           </p>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Contact and Join Team Section */}
+   
       <section className="grid grid-cols-1 md:grid-cols-2">
         <Link
           href="/contact"

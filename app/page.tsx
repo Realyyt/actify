@@ -38,7 +38,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
         <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white z-10 px-4 tracking-wide">
-          AUTHENTIC OUTCOMES FROM<br />AUTHENTIC INDIVIDUALS
+          Empowering families and communities to<br />shape their own futures
         </h1>
       </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Partners Section */}
+      {/* Partners Section 
       <div className="py-32 text-center bg-gray-50">
         <h2 className="text-blue-900 text-3xl mb-16 font-bold">OTHER COMPANIES WE WORK WITH</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl mx-auto px-8">
@@ -173,9 +173,9 @@ export default function Home() {
         </div>
         
         
-      </div>
+      </div>*/}
 
-      {/* Three-column section with team members */}
+      {/* Three-column section with team members 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
         <div className="relative group overflow-hidden">
           <Image 
@@ -219,7 +219,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </div>*/}
 
       {/* By the Numbers Section */}
       <div className="py-32 text-center bg-white">

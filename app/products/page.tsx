@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { ChevronRight, Phone, Calendar, HelpCircle, Shield, Heart, Briefcase, Users } from 'lucide-react';
 import Footer from '../components/footer';
-import Navbar from '../components/navbar';
+import InsuranceNavbar from '../components/insurance-navbar';
 import Link from 'next/link';
 
 export default function InsuranceProductsPage() {
@@ -36,12 +36,12 @@ export default function InsuranceProductsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Header */}
-      <Navbar/>
+      <InsuranceNavbar/>
 
       {/* Hero Section */}
       <section className="bg-blue-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-6">Our Insurance Products</h1>
+          <h1 className="text-4xl font-bold mb-6">PERSONAL PROTECTION: Our Insurance Products</h1>
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Securing Policies, Protecting Clients: We provide dedicated support to ensure the successful 
             completion of insurance applications and the issuance of policies. Protect your future today—choose 
