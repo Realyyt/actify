@@ -5,6 +5,7 @@ import { ChevronRight, Phone, Calendar, HelpCircle, Shield, Heart, Briefcase, Us
 import Footer from '../components/footer';
 import InsuranceNavbar from '../components/insurance-navbar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function InsuranceProductsPage() {
   const [activeTab, setActiveTab] = useState('health');
@@ -242,9 +243,13 @@ export default function InsuranceProductsPage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
-              <div className="h-48 bg-blue-100 relative">
-                <img src="/api/placeholder/400/200" alt="Individual Plan" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-900 bg-opacity-30"></div>
+              <div className="relative w-full h-48">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Individual Plan"
+                  fill
+                  className="object-cover rounded-t-lg"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-800 mb-2">
@@ -259,9 +264,13 @@ export default function InsuranceProductsPage() {
             </div>
             
             <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
-              <div className="h-48 bg-green-100 relative">
-                <img src="/api/placeholder/400/200" alt="Family Plan" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-900 bg-opacity-30"></div>
+              <div className="relative w-full h-48">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Family Plan"
+                  fill
+                  className="object-cover rounded-t-lg"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-800 mb-2">
@@ -276,9 +285,13 @@ export default function InsuranceProductsPage() {
             </div>
             
             <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
-              <div className="h-48 bg-purple-100 relative">
-                <img src="/api/placeholder/400/200" alt="Specialized Plan" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-900 bg-opacity-30"></div>
+              <div className="relative w-full h-48">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Specialized Plan"
+                  fill
+                  className="object-cover rounded-t-lg"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-800 mb-2">
