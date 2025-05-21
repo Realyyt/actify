@@ -103,11 +103,11 @@ export default function Resources() {
       {/* Resources Description */}
       <div className="py-24 md:py-48 flex justify-center bg-gray-50">
         <div className="max-w-4xl text-center px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Digital Resources Library</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Digital Resource Library</h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Access our comprehensive collection of insurance materials, including product guides, 
-            educational videos, and comparison tools. These resources are designed to help you 
-            make informed decisions about your insurance coverage.
+            Access our comprehensive collection of  materials, including product guides, and 
+            educational materials. These resources are designed to help you 
+            make informed decisions regarding any product of your choice.
           </p>
         </div>
       </div>

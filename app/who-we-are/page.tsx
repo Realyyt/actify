@@ -161,7 +161,7 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-
+       {/* Aid to Trade Section
       <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-center text-2xl md:text-4xl font-bold mb-8 md:mb-16 text-navy-800">Empowering Agents, Transforming Insurance</h2>
@@ -259,7 +259,7 @@ export default function WhoWeAre() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
 
 

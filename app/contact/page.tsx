@@ -214,7 +214,7 @@ export default function Contact() {
 
                       {isDropdownOpen && (
                         <div className="absolute z-10 w-full bg-white border border-gray-300 mt-1">
-                          {["General Inquiry", "Sales", "Marketing", "Careers", "Media", "Other"].map((item) => (
+                          {["General Inquiry", "Personal Protection Products", "Aid-To-Trade Products", "Careers", "Media", "Other"].map((item) => (
                             <div
                               key={item}
                               className="p-3 hover:bg-gray-100 cursor-pointer"

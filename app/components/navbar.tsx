@@ -53,7 +53,7 @@ export default function Navbar() {
               Our Program Products
             </Link>
             <Link href="/resources" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Resources
+              DIgital Resource Library
             </Link>
             <Link href="/careers" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Careers

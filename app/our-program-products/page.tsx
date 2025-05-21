@@ -54,9 +54,9 @@ export default function OurProgramProductsPage() {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Explore our comprehensive programs designed to foster economic resilience, sustainable growth, and true partnership.
           </p>
-          <a href="#help" className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+          <a href="/contact" className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
             <Phone size={20} className="mr-2" />
-            Get Help from a Licensed Provider
+            Get Help from a Program Expert
           </a>
         </div>
       </section>
@@ -106,18 +106,14 @@ export default function OurProgramProductsPage() {
             Get personalized advice and quotes today.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button
-              className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
-            >
-              <Phone size={20} className="mr-2" />
-              Schedule a Call
-            </button>
-            <button
-              className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
-            >
-              <HelpCircle size={20} className="mr-2" />
-              Compare Programs
-            </button>
+              <a
+                href="/contact"
+                className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center"
+              >
+                <Phone size={20} className="mr-2" />
+                Schedule a Call
+              </a>
+            
           </div>
         </div>
       </section>
