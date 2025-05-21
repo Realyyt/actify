@@ -327,7 +327,7 @@ export default function ProductDetail() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
-              Get a Quote for {product.name}
+              Get a Quote 
             </h2>
             <QuoteForm insuranceType={product.name} />
           </div>
