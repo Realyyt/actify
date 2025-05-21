@@ -77,7 +77,7 @@ export default function TermsOfUsePage() {
           <li>To send, receive, upload, download, or re-use material that does not comply with the Content Standards outlined in these Terms of Use.</li>
           <li>To distribute unauthorized advertising or promotional content, including junk mail, chain letters, spam, or similar solicitations, without our prior written consent.</li>
           <li>To impersonate the Company, its employees, another user, or any other entity—including using false email credentials or identities.</li>
-          <li>To engage in conduct that disrupts others' access to the Website or causes harm to the Company or users, as determined by us.</li>
+          <li>To engage in conduct that disrupts others&apos; access to the Website or causes harm to the Company or users, as determined by us.</li>
           <li>To overload, damage, or interfere with Website functionality, including real-time interactions.</li>
           <li>To use automated means (such as bots, spiders, or scraping tools) for data collection, monitoring, or duplication of Website materials.</li>
           <li>To manually copy or monitor Website content for purposes not expressly permitted in these Terms, without prior written approval.</li>
@@ -236,7 +236,7 @@ export default function TermsOfUsePage() {
           To the fullest extent permitted by law, we will not be liable for any damages or losses resulting from viruses, distributed denial-of-service (DDoS) attacks, or other harmful technology that may affect your computer, software, data, or proprietary materials due to your use of this Website or any linked resources.
         </p>
         <p className="mb-6">
-          Your use of this Website, its content, and any services or materials is at your own risk. The Website is provided "as is" and "as available", without any warranties, express or implied.
+          Your use of this Website, its content, and any services or materials is at your own risk. The Website is provided &quot;as is&quot; and &quot;as available&quot;, without any warranties, express or implied.
         </p>
         <p className="mb-4">We do not guarantee or warrant:</p>
         <ul className="list-disc pl-6 mb-6">
