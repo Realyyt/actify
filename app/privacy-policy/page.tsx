@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
       
       <div className="prose prose-lg">
         <p className="mb-6">
-          Impact Delivery Group, LLC ("IDG," "we," "us," or "our") is committed to safeguarding your privacy. This Privacy Policy outlines how we collect, use, maintain, protect, and disclose your information when you interact with our website, impactdeliverygroup.com (the "Website"), or submit information via a third-party contact form ("Contact Form").
+          Impact Delivery Group, LLC (&quot;IDG,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to safeguarding your privacy. This Privacy Policy outlines how we collect, use, maintain, protect, and disclose your information when you interact with our website, impactdeliverygroup.com (the &quot;Website&quot;), or submit information via a third-party contact form (&quot;Contact Form&quot;).
         </p>
 
         <p className="mb-6">
@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to Our Privacy Policy</h2>
         <p className="mb-6">
-          We will post updates to this Privacy Policy on this page. If we make material changes affecting how we handle visitors' personal information, we will provide notification on the Website. The last revision date is listed at the bottom of this policy. You are responsible for periodically reviewing this Privacy Policy and any updates.
+          We will post updates to this Privacy Policy on this page. If we make material changes affecting how we handle visitors&apos; personal information, we will provide notification on the Website. The last revision date is listed at the bottom of this policy. You are responsible for periodically reviewing this Privacy Policy and any updates.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Children Under the Age of 18</h2>
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">User Contributions</h2>
         <p className="mb-6">
-          You may submit information to be published or displayed ("Posted") on our Website or shared with other users or third parties ("User Contributions"). These submissions are made at your own risk, as we cannot guarantee absolute security. While we restrict access to certain Website areas, no security measures are completely impenetrable, nor can we control how other users interact with your contributions.
+          You may submit information to be published or displayed (&quot;Posted&quot;) on our Website or shared with other users or third parties (&quot;User Contributions&quot;). These submissions are made at your own risk, as we cannot guarantee absolute security. While we restrict access to certain Website areas, no security measures are completely impenetrable, nor can we control how other users interact with your contributions.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Information Collected Through Automatic Data Collection Technologies</h2>

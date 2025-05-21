@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import { ShieldCheck } from 'lucide-react';
 
 export default function TermsOfUsePage() {
   return (
@@ -7,7 +9,7 @@ export default function TermsOfUsePage() {
       
       <div className="prose prose-lg">
         <p className="mb-6">
-          Welcome to the official website of Impact Delivery Group, LLC ("IDG," "we," "us," or "our"), located at impactdeliverygroup.com (the "Website").
+          Welcome to the official website of Impact Delivery Group, LLC (&quot;IDG,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), located at impactdeliverygroup.com (the &quot;Website&quot;).
         </p>
 
         <p className="mb-6">
@@ -132,7 +134,7 @@ export default function TermsOfUsePage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">User Contributions</h2>
         <p className="mb-6">
-          The Website may feature interactive services, such as forums, profiles, message boards, and other user-generated content areas. Any materials posted or submitted by users ("User Contributions") must comply with our Content Standards.
+          The Website may feature interactive services, such as forums, profiles, message boards, and other user-generated content areas. Any materials posted or submitted by users (&quot;User Contributions&quot;) must comply with our Content Standards.
         </p>
         <p className="mb-6">
           By submitting User Contributions, you grant IDG and its affiliates the right to use, reproduce, modify, display, distribute, and disclose such content as permitted under your account settings.
@@ -302,7 +304,7 @@ export default function TermsOfUsePage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Waiver & Severability</h2>
         <p className="mb-6">
-          The Company's failure to enforce any provision of these Terms of Use shall not be considered a waiver of that term, nor shall it constitute a continued or future waiver of the same or any other provision. Likewise, the Company's decision not to assert a right or provision under these Terms shall not be interpreted as a waiver of that right.
+          The Company&apos;s failure to enforce any provision of these Terms of Use shall not be considered a waiver of that term, nor shall it constitute a continued or future waiver of the same or any other provision. Likewise, the Company&apos;s decision not to assert a right or provision under these Terms shall not be interpreted as a waiver of that right.
         </p>
         <p className="mb-6">
           If any provision of these Terms of Use is determined to be invalid, illegal, or unenforceable by a court or tribunal of competent jurisdiction, that provision shall be modified or removed to the minimum extent necessary, ensuring that the remainder of the Terms remain in full force and effect.
@@ -326,9 +328,14 @@ export default function TermsOfUsePage() {
           This Website is operated by IDG, LLC. Any feedback, inquiries, technical support requests, or other communications related to the Website should be directed to wecanhelp@impactdeliverygroup.com and will be governed by our Disclaimer.
         </p>
 
-        <p className="text-sm text-gray-600 mt-12">
-          LAST UPDATED: MAY 2025
-        </p>
+        <p className="text-center mb-8 text-gray-400">© 2025 Impact Delivery Group LLC. ALL RIGHTS RESERVED.</p>
+        <div className="flex justify-center flex-wrap gap-x-8 gap-y-4 text-sm">
+          <Link href="/privacy-policy" className="hover:underline">Privacy Notice</Link>
+          <div className="flex items-center">
+            <Link href="/privacy-choices" className="hover:underline">Your Privacy Choices</Link>
+            <ShieldCheck className="w-4 h-4 ml-1" />
+          </div>
+        </div>
       </div>
     </div>
   );
