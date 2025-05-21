@@ -2,37 +2,9 @@
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import Footer from "../components/footer"
-import { HandMetal, PartyPopper, Target } from "lucide-react"
 import Navbar from "../components/navbar"
 
 export default function WhoWeAre() {
-  const cards = [
-    {
-      title: "Agents Thrive",
-      description: "IDG provides agents with cutting-edge tools, comprehensive training, and unparalleled support, enabling them to grow their careers while delivering exceptional service",
-      color: "bg-teal-600",
-      hoverColor: "hover:bg-teal-500",
-      icon: <Target className="w-12 h-12 text-white" />,
-      image: "/res.jpg", // Replace with actual image path
-    },
-    {
-      title: "Clients Succeed",
-      description: "For clients, IDG is more than an insurance provider—it's a partner dedicated to protecting their future, safeguarding their families, and helping them achieve lasting peace of mind.",
-      color: "bg-amber-700",
-      hoverColor: "hover:bg-amber-600",
-      icon: <PartyPopper className="w-12 h-12 text-white" />,
-      image: "/un.jpg", // Replace with actual image path
-    },
-    {
-      title: "Together, We Make a Difference",
-      description: "By emphasizing personalized care and thoughtful guidance, IDG transforms insurance into a meaningful and impactful experience.",
-      color: "bg-blue-700",
-      hoverColor: "hover:bg-blue-600",
-      icon: <HandMetal className="w-12 h-12 text-white" />,
-      image: "/fun.jpg", // Replace with actual image path
-    },
-  ]
-
   const heroTexts = [
     "At IDG , innovation and empowerment take center stage.",
     "Aid to Trade: Advancing Personal Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions, Sustainable Growth"
