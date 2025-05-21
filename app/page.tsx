@@ -140,7 +140,7 @@ export default function Home() {
                   <Cpu className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">TECHNOLOGY</h2>
-                <h2 className="text-5xl mb-10 font-bold tracking-wide">TECHNOLOGY</h2>
+
                 <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed">
                   We leverage cutting-edge technology to <strong>streamline processes</strong> and <strong>drive innovation</strong> across all aspects of our business.
                 </p>

@@ -10,7 +10,7 @@ import QuoteForm from '../../components/QuoteForm';
 // Product data mapping with flyers added
 const productDetails = {
   'accident-insurance': {
-    name: 'Accident Insurance',
+    name: 'ACCIDENT INSURANCE',
     icon: <Shield size={48} className="text-blue-600" />,
     description: 'Provides cash benefits for injuries or illnesses.',
     flyers: [
@@ -47,7 +47,7 @@ const productDetails = {
     ]
   },
   'aca-marketplace': {
-    name: 'ACA Marketplace Plans',
+    name: 'ACA MARKETPLACE PLANS',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'Comprehensive health coverage through the Affordable Care Act marketplace.',
     flyers: [
@@ -84,7 +84,7 @@ const productDetails = {
     ]
   },
   'critical-illness': {
-    name: 'Critical Illness Insurance',
+    name: 'CRITICAL ILLNESS INSURANCE',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'Provides financial protection against major illnesses.',
     flyers: [
@@ -121,7 +121,7 @@ const productDetails = {
     ]
   },
   'dental-vision': {
-    name: 'Dental & Vision',
+    name: 'DENTAL & VISION',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Comprehensive dental and vision coverage for individuals and families.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -130,7 +130,7 @@ const productDetails = {
     }))
   },
   'group-health': {
-    name: 'Group Health Plans',
+    name: 'GROUP HEALTH PLANS',
     icon: <Briefcase size={48} className="text-blue-600" />,
     description: 'Comprehensive health coverage for businesses and organizations.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -139,7 +139,7 @@ const productDetails = {
     }))
   },
   'individual-family': {
-    name: 'Individual & Family Health Plans',
+    name: 'INDIVIDUAL & FAMILY HEALTH PLANS',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Personalized health coverage for individuals and families.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -148,7 +148,7 @@ const productDetails = {
     }))
   },
   'short-term-medical': {
-    name: 'Short-Term Medical Plans',
+    name: 'SHORT-TERM MEDICAL PLANS',
     icon: <Calendar size={48} className="text-blue-600" />,
     description: 'Temporary health coverage for specific time periods.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -157,7 +157,7 @@ const productDetails = {
     }))
   },
   'supplemental-health': {
-    name: 'Supplemental Health Plans',
+    name: 'SUPPLEMENTAL HEALTH PLANS',
     icon: <Users size={48} className="text-blue-600" />,
     description: 'Additional coverage for specific health needs.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -166,7 +166,7 @@ const productDetails = {
     }))
   },
   'medicare-advantage-pdp': {
-    name: 'Medicare Advantage PDP',
+    name: 'MEDICARE ADVANTAGE PDP',
     icon: <Heart size={48} className="text-blue-600" />,
     description: 'All-in-one alternative to Original Medicare.',
     flyers: Array(30).fill(null).map((_, i) => ({
@@ -175,7 +175,7 @@ const productDetails = {
     }))
   },
   'prescription-drug-plan': {
-    name: 'Prescription Drug Plan',
+    name: 'PRESCRIPTION DRUG PLAN',
     icon: <Pill size={48} className="text-blue-600" />,
     description: 'Coverage for prescription medications.',
     flyers: Array(30).fill(null).map((_, i) => ({

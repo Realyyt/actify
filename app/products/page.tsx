@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, ReactElement } from 'react';
 import { ChevronRight, Phone, Calendar, HelpCircle, Shield, Heart, Briefcase, Users } from 'lucide-react';
 import Footer from '../components/footer';
 import InsuranceNavbar from '../components/insurance-navbar';
@@ -11,7 +11,7 @@ export default function InsuranceProductsPage() {
   const [activeTab, setActiveTab] = useState('health');
 
   // Product image maps - in a real app these would be actual image imports
-  const productIcons = {
+  const productIcons: { [key: string]: ReactElement } = {
     'Accident Insurance': <Shield size={48} className="text-blue-600" />,
     'Affordable Care Act (ACA) Marketplace Plans': <Heart size={48} className="text-blue-600" />,
     'Critical Illness Insurance': <Shield size={48} className="text-red-600" />,
@@ -32,6 +32,22 @@ export default function InsuranceProductsPage() {
     'Group Life Insurance': <Users size={48} className="text-blue-600" />,
     'Survivorship Life Insurance': <Users size={48} className="text-green-600" />,
     'Accidental Death and Dismemberment (AD&D) Insurance': <Shield size={48} className="text-red-600" />
+  };
+
+  // Product display name mapping
+  const productDisplayNames: { [key: string]: string } = {
+    'accident-insurance': 'Accident Insurance',
+    'aca-marketplace': 'ACA Marketplace Plans',
+    'critical-illness': 'Critical Illness Insurance',
+    'dental-vision': 'Dental & Vision',
+    'group-health': 'Group Health Plans',
+    'individual-family': 'Individual & Family Health Plans',
+    'short-term-medical': 'Short-Term Medical Plans',
+    'supplemental-health': 'Supplemental Health Plans',
+    'medicare-supplement': 'Medicare Supplement',
+    'medicare-advantage': 'Medicare Advantage',
+    'medicare-advantage-pdp': 'Medicare Advantage PDP',
+    'prescription-drug-plan': 'Prescription Drug Plan',
   };
 
   return (
@@ -144,7 +160,7 @@ export default function InsuranceProductsPage() {
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-900">HEALTH INSURANCE PRODUCTS</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  {name: 'Accident Insurance', desc: 'Provides cash benefits for injuries or illnesses.'},
+                  {name: 'accident-insurance', desc: 'Provides cash benefits for injuries or illnesses.'},
                   {name: 'aca-marketplace', desc: 'Essential health benefits, including preventive care, prescription drugs, mental health services, and maternity care.'},
                   {name: 'critical-illness', desc: 'Offers financial relief for covered critical illnesses.'},
                   {name: 'dental-vision', desc: 'Covers routine and comprehensive dental care.'},
@@ -156,25 +172,25 @@ export default function InsuranceProductsPage() {
                   {name: 'medicare-advantage', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
                   {name: 'medicare-advantage-pdp', desc: 'An alternative to Original Medicare, often include additional benefits like vision, dental, and prescription drug coverage.'},
                   {name: 'prescription-drug-plan', desc: 'Prescription drug plans to help cover the cost of medications.'}
-                ].map((product, index) => (
+                ].map((product: { name: string; desc: string }, index) => (
                   <div key={index} className="border rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow bg-white">
                     <div className="flex items-center mb-4">
                       <div className="mr-4">
-                        {productIcons[product.name as keyof typeof productIcons]}
+                        {productIcons[productDisplayNames[product.name] || product.name]}
                       </div>
-                      <h3 className="text-xl font-bold text-blue-800">{product.name}</h3>
+                      <h3 className="text-xl font-bold text-blue-800">{productDisplayNames[product.name] || product.name}</h3>
                     </div>
                     <p className="text-gray-600 mb-4">{product.desc}</p>
                     <div className="flex gap-3 mt-4">
                       <Link
-                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        href={`/products/${product.name}`}
                         className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                       >
                         <ChevronRight size={16} className="mr-1" />
                         Learn More
                       </Link>
                       <Link
-                        href={`/products/${product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}#quote`}
+                        href={`/products/${product.name}#quote`}
                         className="text-green-600 hover:text-green-800 font-medium flex items-center"
                       >
                         <Calendar size={16} className="mr-1" />
