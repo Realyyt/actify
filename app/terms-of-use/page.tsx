@@ -166,7 +166,7 @@ export default function TermsOfUsePage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Content Standards</h2>
         <p className="mb-6">
-          These standards apply to all User Contributions and interactions within the Website's Interactive Services. All contributions must fully comply with applicable federal, state, local, and international laws and regulations.
+          These standards apply to all User Contributions and interactions within the Website&apos;s Interactive Services. All contributions must fully comply with applicable federal, state, local, and international laws and regulations.
         </p>
         <p className="mb-4">User Contributions must not:</p>
         <ul className="list-disc pl-6 mb-6">
