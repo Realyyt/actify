@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { Phone,  HelpCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 

@@ -1,14 +1,11 @@
 "use client"
-import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import Footer from "../components/footer"
-import { ChevronLeft, ChevronRight, HandMetal,  PartyPopper, Target } from "lucide-react"
+import { HandMetal, PartyPopper, Target } from "lucide-react"
 import Navbar from "../components/navbar"
 
 export default function WhoWeAre() {
-  const [activeCardIndex, setActiveCardIndex] = React.useState(2)
-
   const cards = [
     {
       title: "Agents Thrive",
@@ -35,14 +32,6 @@ export default function WhoWeAre() {
       image: "/fun.jpg", // Replace with actual image path
     },
   ]
-
-  const handlePrev = () => {
-    setActiveCardIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1))
-  }
-
-  const handleNext = () => {
-    setActiveCardIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1))
-  }
 
   const heroTexts = [
     "At IDG , innovation and empowerment take center stage.",
