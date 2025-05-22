@@ -6,8 +6,7 @@ import Navbar from "../components/navbar"
 
 export default function WhoWeAre() {
   const heroTexts = [
-    "At IDG , innovation and empowerment take center stage.",
-    "Aid to Trade: Advancing Personal Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions, Sustainable Growth"
+    "At Impact Delivery Group , innovation and empowerment take center stage.",
   ];
   const [currentIdx, setCurrentIdx] = useState(0);
   const [show, setShow] = useState(true);
@@ -57,7 +56,7 @@ export default function WhoWeAre() {
             <div className="text-center mb-12">
               <span className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-1 rounded-full">OUR APPROACH</span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mt-4 mb-6">
-              Aid to Trade: Advancing Personal Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions and Sustainable Growth
+              Aid-To-Trade: Advancing Proper Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions and Sustainable Growth
               </h2>
               <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
             </div>
@@ -67,7 +66,7 @@ export default function WhoWeAre() {
               <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-100 rounded-full -ml-20 -mb-20 opacity-50"></div>
               
               <p className="text-gray-700 text-lg mb-8 relative z-10">
-                At Impact Delivery Group (IDG), Aid to Trade is more than a model—it&lsquo;s a strategy for long-term economic independence. By integrating personal protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
+                At Impact Delivery Group , Aid-To-Trade is more than a model—it&lsquo;s a strategy for long-term economic independence. By integrating personal protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 relative z-10">
@@ -98,18 +97,26 @@ export default function WhoWeAre() {
                 <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
                     <span className="bg-blue-500 text-white p-2 rounded-lg mr-3">4</span>
+                    Access to Capital
+                  </h3>
+                  <p className="text-gray-600">Expanding financial access through government support, private investment and partnerships foster innovation, job creation and sustainable economic growth.</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-teal-500 text-white p-2 rounded-lg mr-3">5</span>
                     Market-Based Solutions
                   </h3>
                   <p className="text-gray-600">Investing in enterprise-driven approaches that foster self-sufficiency, private-sector growth, and economic resilience.</p>
                 </div>
-              </div>
 
-              <div className="mt-8 bg-gradient-to-r from-teal-500 to-blue-500 p-6 rounded-xl text-white relative z-10">
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <span className="bg-white text-teal-500 p-2 rounded-lg mr-3">5</span>
-                  Access to Capital
-                </h3>
-                <p className="text-white/90">Expanding financial access through government support , private investment and patnerships foster innovation , job creation anad sustainable economic growth</p>
+                <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
+                    <span className="bg-blue-500 text-white p-2 rounded-lg mr-3">6</span>
+                    Sustainable Growth
+                  </h3>
+                  <p className="text-gray-600">Moving beyond short-term aid by building stronger systems that enable leading prosperity through trade investment and innovation.</p>
+                </div>
               </div>
 
               <div className="mt-8 text-center relative z-10">

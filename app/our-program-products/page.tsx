@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { Phone } from 'lucide-react';
+import { Phone, Shield, Users, Building2, Lightbulb, Wallet, TrendingUp } from 'lucide-react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 
@@ -13,32 +13,38 @@ export default function OurProgramProductsPage() {
     {
       id: 'protection',
       title: 'Scaling Personal Protection for Economic Resilience',
-      content: 'Expanding health and life insurance fosters financial stability, risk mitigation, and sustainable development. Accessible coverage protects individuals and businesses from crises while enhancing market confidence, investment, and workforce productivity. Governments and institutions benefit from reduced reliance on aid, enabling a shift toward self-sufficiency and long-term prosperity. Integrating personal protection into Aid to Trade empowers communities, secures livelihoods, and strengthens economic resilience.'
+      content: 'Expanding health and life insurance fosters financial stability, risk mitigation, and sustainable development. Accessible coverage protects individuals and businesses from crises while enhancing market confidence, investment, and workforce productivity. Governments and institutions benefit from reduced reliance on aid, enabling a shift toward self-sufficiency and long-term prosperity. Integrating personal protection into Aid to Trade empowers communities, secures livelihoods, and strengthens economic resilience.',
+      icon: Shield
     },
     {
       id: 'leadership',
       title: 'Quality Leadership Through Delivery Units',
-      content: 'Delivery units are specialized teams that enhance governance, institutional efficiency, and leadership impact across governments, businesses, and organizations. By supporting ministries, corporate boards, and nonprofit management, these units drive accountability, performance, and measurable success in mission-critical initiatives. Their structured approach ensures organizations achieve strategic goals with efficiency and focus.'
+      content: 'Delivery units are specialized teams that enhance governance, institutional efficiency, and leadership impact across governments, businesses, and organizations. By supporting ministries, corporate boards, and nonprofit management, these units drive accountability, performance, and measurable success in mission-critical initiatives. Their structured approach ensures organizations achieve strategic goals with efficiency and focus.',
+      icon: Users
     },
     {
       id: 'development',
       title: 'Locally-Led Development: A Shift Toward True Partnership',
-      content: 'Sustainable development thrives when countries and communities take ownership of their futures. At IDG, Locally-Led Development is central to Aid to Trade, ensuring decision-making power and resources remain with national governments, community leaders, and local institutions. By fostering market-based solutions, entrepreneurship, and economic opportunity, we transform aid into self-sufficiency, resilience, and long-term growth – making Aid to Trade a reality, not just a concept.'
-    },
-    {
-      id: 'solutions',
-      title: 'Market-Based Solutions: Turning Aid into Sustainable Growth',
-      content: 'At IDG, Market-Based Solutions drive the transition from aid dependency to economic self-sufficiency, empowering former aid recipient countries to lead their own development. By fostering entrepreneurship, creating sustainable jobs, and strengthening healthcare and education, we ensure long-term impact beyond immediate assistance. This approach builds resilience, aligns priorities, and promotes enterprise-driven innovation, allowing communities to thrive through lasting, market-driven growth.'
+      content: 'Sustainable development thrives when countries and communities take ownership of their futures. At IDG, Locally-Led Development is central to Aid to Trade, ensuring decision-making power and resources remain with national governments, community leaders, and local institutions. By fostering market-based solutions, entrepreneurship, and economic opportunity, we transform aid into self-sufficiency, resilience, and long-term growth – making Aid to Trade a reality, not just a concept.',
+      icon: Building2
     },
     {
       id: 'capital',
       title: 'Expanding Access to Capital for Sustainable Growth',
-      content: 'Providing businesses, startups, government institutions, and non-profits with financial access fuels entrepreneurship, economic mobility, and institutional development. Funding sources like government grants, private investment, and public-private partnerships enable organizations to scale operations, create jobs, and strengthen communities, ensuring self-sufficiency and long-term prosperity beyond aid dependency.'
+      content: 'Providing businesses, startups, government institutions, and non-profits with financial access fuels entrepreneurship, economic mobility, and institutional development. Funding sources like government grants, private investment, and public-private partnerships enable organizations to scale operations, create jobs, and strengthen communities, ensuring self-sufficiency and long-term prosperity beyond aid dependency.',
+      icon: Wallet
+    },
+    {
+      id: 'solutions',
+      title: 'Market-Based Solutions: Turning Aid into Sustainable Growth',
+      content: 'At IDG, Market-Based Solutions drive the transition from aid dependency to economic self-sufficiency, empowering former aid recipient countries to lead their own development. By fostering entrepreneurship, creating sustainable jobs, and strengthening healthcare and education, we ensure long-term impact beyond immediate assistance. This approach builds resilience, aligns priorities, and promotes enterprise-driven innovation, allowing communities to thrive through lasting, market-driven growth.',
+      icon: Lightbulb
     },
     {
       id: 'growth',
       title: 'Sustainable Growth: Transforming Development Through True Partnership',
-      content: 'The future of development depends on empowering former aid recipient countries to lead their own economic growth. IDG\'s Aid to Trade strategy prioritizes community-driven solutions, market-based investments, and shared ownership, ensuring long-term self-sufficiency. By collaborating with governments, local leaders, and institutions, we create sustainable jobs, improve healthcare and education, and build resilient economies. True aid strengthens systems, fosters opportunity, and drives lasting prosperity – making Aid to Trade a necessary shift toward global partnership and economic independence.'
+      content: 'The future of development depends on empowering former aid recipient countries to lead their own economic growth. IDG\'s Aid to Trade strategy prioritizes community-driven solutions, market-based investments, and shared ownership, ensuring long-term self-sufficiency. By collaborating with governments, local leaders, and institutions, we create sustainable jobs, improve healthcare and education, and build resilient economies. True aid strengthens systems, fosters opportunity, and drives lasting prosperity – making Aid to Trade a necessary shift toward global partnership and economic independence.',
+      icon: TrendingUp
     },
   ];
 
@@ -75,7 +81,10 @@ export default function OurProgramProductsPage() {
                 }`}
                 onClick={() => setActiveTab(section.id)}
               >
-                <h3 className={`text-xl font-bold mb-4 ${activeTab === section.id ? 'text-white' : 'text-gray-600'}`}>{section.title}</h3>
+                <div className="flex items-center mb-4">
+                  <section.icon size={24} className={`mr-3 ${activeTab === section.id ? 'text-white' : 'text-blue-800'}`} />
+                  <h3 className={`text-xl font-bold ${activeTab === section.id ? 'text-white' : 'text-gray-600'}`}>{section.title}</h3>
+                </div>
                 <p className={`text-sm line-clamp-3 ${activeTab === section.id ? 'text-white' : 'text-gray-600'}`}>
                   {section.content}
                 </p>
@@ -102,7 +111,7 @@ export default function OurProgramProductsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-blue-900">Need Help Choosing?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Our licensed providers are ready to help you find the right program for your needs.
+            Our providers are ready to help you find the right program for your needs.
             Get personalized advice and quotes today.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">

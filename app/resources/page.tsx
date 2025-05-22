@@ -17,57 +17,8 @@ type Resource = {
 }
 
 export default function Resources() {
-  // Define sample resources
-  const resources: Resource[] = [
-    {
-      id: 1,
-      title: "Term Life Insurance Guide",
-      type: "pdf",
-      category: ["life_insurance", "educational"],
-      thumbnail: "/placeholder.svg?height=400&width=300",
-      downloadUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Understanding Medicare Coverage",
-      type: "video",
-      category: ["medicare", "educational"],
-      thumbnail: "/placeholder.svg?height=400&width=300",
-      videoUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Dental Insurance Plans Comparison",
-      type: "pdf",
-      category: ["dental", "comparison"],
-      thumbnail: "/placeholder.svg?height=400&width=300",
-      downloadUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Vision Coverage Overview",
-      type: "pdf",
-      category: ["vision", "educational"],
-      thumbnail: "/placeholder.svg?height=400&width=300",
-      downloadUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Health Insurance Enrollment Guide",
-      type: "video",
-      category: ["health", "educational"],
-      thumbnail: "/placeholder.svg?height=400&width=300",
-      videoUrl: "#"
-    }
-  ]
-
   // State for the selected category
   const [selectedCategory, setSelectedCategory] = useState("all")
-
-  // Filter resources based on selected category
-  const filteredResources = selectedCategory === "all" 
-    ? resources 
-    : resources.filter((resource) => resource.category.includes(selectedCategory))
 
   // Resource categories
   const categories = [
@@ -96,7 +47,7 @@ export default function Resources() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold text-white text-center max-w-4xl px-4">
-          INSURANCE RESOURCES & MATERIALS
+          Digital Resources and Materials
         </h1>
       </section>
 
@@ -105,7 +56,7 @@ export default function Resources() {
         <div className="max-w-4xl text-center px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Digital Resource Library</h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Access our comprehensive collection of  materials, including product guides, and 
+            Access our comprehensive collection of materials, including product guides, and 
             educational materials. These resources are designed to help you 
             make informed decisions regarding any product of your choice.
           </p>
@@ -137,31 +88,17 @@ export default function Resources() {
             {/* Resources Grid */}
             <div className="lg:w-3/4">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {filteredResources.map((resource) => (
-                  <div key={resource.id} className="flex flex-col">
-                    <div className="relative aspect-[3/4] mb-2 overflow-hidden">
-                      <Image src={resource.thumbnail} alt={resource.title} fill className="object-cover" />
-                      <div className="absolute top-2 right-2 bg-teal-500 text-white px-2 py-1 rounded text-sm">
-                        {resource.type.toUpperCase()}
-                      </div>
-                    </div>
-                    <div className="bg-teal-500 text-white p-2 md:p-3">
-                      <h3 className="font-medium text-sm md:text-base text-center">{resource.title}</h3>
-                      <div className="flex justify-center mt-2">
-                        {resource.downloadUrl && (
-                          <a href={resource.downloadUrl} className="text-white hover:text-gray-200 text-sm">
-                            Download PDF
-                          </a>
-                        )}
-                        {resource.videoUrl && (
-                          <a href={resource.videoUrl} className="text-white hover:text-gray-200 text-sm">
-                            Watch Video
-                          </a>
-                        )}
-                      </div>
-                    </div>
+                <div className="col-span-full flex flex-col items-center justify-center py-16 px-4 text-center">
+                  <div className="w-24 h-24 mb-6 rounded-full bg-teal-100 flex items-center justify-center">
+                    <svg className="w-12 h-12 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
-                ))}
+                  <h3 className="text-2xl font-bold text-gray-800 mb-3">Coming Soon</h3>
+                  <p className="text-gray-600 max-w-md">
+                    We're working hard to bring you valuable resources and materials. Stay tuned for updates!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

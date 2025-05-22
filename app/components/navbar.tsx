@@ -40,20 +40,23 @@ export default function Navbar() {
                 <X className="w-8 h-8" />
               </button>
             </div>
+            <Link href="/" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+              Home
+            </Link>
             <Link href="/who-we-are" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               About Us
             </Link>
             <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
              What We Do, Our Approach, Why It Matters
             </Link>
-            <Link href="/products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+            <a href="https://idginsuranceagency.impactdeliverygroup.com" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Our Insurance Products
-            </Link>
+            </a>
             <Link href="/our-program-products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Our Program Products
             </Link>
             <Link href="/resources" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              DIgital Resource Library
+              Digital Resource Library
             </Link>
             <Link href="/careers" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Careers

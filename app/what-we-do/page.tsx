@@ -28,7 +28,7 @@ export default function WhatWeDo() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
         <div className="relative z-10 text-center max-w-5xl px-6 md:px-8 py-16">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            <span className="text-teal-400">Aid to Trade: </span>
+            <span className="text-teal-400">Aid-To-Trade: </span>
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto mb-8">
           Transforming Assistance into Economic Independence and Sustainable Growth.
@@ -37,9 +37,7 @@ export default function WhatWeDo() {
             <Link href="/contact" className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg">
               Contact Us
             </Link>
-            <Link href="/learn-more" className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 border border-white/30">
-              Learn More
-            </Link>
+            
           </div>
         </div>
       </section>
@@ -57,7 +55,7 @@ export default function WhatWeDo() {
             <span className="inline-block w-24 h-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500"></span>
           </div>
           <p className="text-xl md:text-2xl text-gray-700 font-semibold mb-8 drop-shadow-lg bg-white/70 rounded-xl px-6 py-4 inline-block shadow-lg">
-            At Impact Delivery Group (IDG), we turn aid into trade by fostering economic independence through personal protection, quality leadership,locally-led initiatives,market-based solutions,access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
+            At Impact Delivery Group , we turn aid into trade by fostering economic independence through personal protection, quality leadership,locally-led initiatives,market-based solutions,access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
           </p>
         </div>
       </section>
@@ -75,7 +73,7 @@ export default function WhatWeDo() {
               <div className="bg-teal-500 text-white p-4 rounded-full mb-4 shadow-lg">
                 <Shield size={32} />
               </div>
-              <h3 className="text-xl font-semibold text-navy-800 mb-2">Personal Protection</h3>
+              <h3 className="text-xl font-semibold text-navy-800 mb-2">Proper Protection</h3>
               <p className="text-gray-600">
                 Safeguarding economic security, healthcare access, and essential resources, ensuring individuals and communities have the foundation to grow and succeed.
               </p>
