@@ -75,7 +75,7 @@ export default function WhoWeAre() {
                 <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-semibold text-navy-800 mb-3 flex items-center">
                     <span className="bg-teal-500 text-white p-2 rounded-lg mr-3">1</span>
-                    Personal Protection
+                    Proper Protection
                   </h3>
                   <p className="text-gray-600">Safeguarding communities by ensuring equitable access to economic security, healthcare, and essential resources.</p>
                 </div>
