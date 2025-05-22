@@ -105,11 +105,7 @@ export default function Home() {
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
                   Through various marketing channels, we strive to <strong>attract new leads</strong> and <strong>boost brand appeal</strong>, for our customers success to yield.
                 </p>
-                <div className="mt-8 sm:mt-12">
-                  <Link href="/marketing" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
-                    LEARN MORE <ArrowRight className="inline-block ml-2" />
-                  </Link>
-                </div>
+                
               </div>
             </div>
           )}
@@ -124,11 +120,7 @@ export default function Home() {
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
                   Our team is committed to <strong>supporting your success</strong> and fostering <strong>strong partnerships</strong> with our agents.
                 </p>
-                <div className="mt-8 sm:mt-12">
-                  <Link href="/sales" className="bg-orange-500 text-white px-6 sm:px-10 py-2 sm:py-4 inline-block text-base sm:text-lg font-medium hover:bg-orange-600 transition-colors">
-                    LEARN MORE <ArrowRight className="inline-block ml-2" />
-                  </Link>
-                </div>
+                
               </div>
             </div>
           )}
@@ -144,11 +136,7 @@ export default function Home() {
                 <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed">
                   We leverage cutting-edge technology to <strong>streamline processes</strong> and <strong>drive innovation</strong> across all aspects of our business.
                 </p>
-                <div className="mt-12">
-                  <Link href="/technology" className="bg-orange-500 text-white px-10 py-4 inline-block text-lg font-medium hover:bg-orange-600 transition-colors">
-                    LEARN MORE <ArrowRight className="inline-block ml-2" />
-                  </Link>
-                </div>
+                
               </div>
             </div>
           )}

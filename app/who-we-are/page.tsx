@@ -6,7 +6,7 @@ import Navbar from "../components/navbar"
 
 export default function WhoWeAre() {
   const heroTexts = [
-    "At Impact Delivery Group , innovation and empowerment take center stage.",
+    "At Impact Delivery Group,innovation and empowerment take center stage.",
   ];
   const [currentIdx, setCurrentIdx] = useState(0);
   const [show, setShow] = useState(true);
@@ -48,6 +48,8 @@ export default function WhoWeAre() {
           </h1>
         </div>
       </section>
+
+    
 
            {/* Aid to Trade Section */}
            <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
@@ -289,6 +291,67 @@ export default function WhoWeAre() {
           </p>
         </div>
       </section>*/}
+
+        {/* Solution Section (added based on provided image) */}
+        <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Left: Text */}
+          <div className="md:w-1/2 mb-10 md:mb-0">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mb-6">Solution</h2>
+            <p className="text-gray-700 text-lg">
+              Our product – <span className="font-semibold text-teal-600">Aid to Trade</span> – shifts traditional aid into market-driven solutions, empowering communities and businesses to achieve economic independence and sustainable growth beyond external assistance.
+            </p>
+          </div>
+          {/* Right: Hexagon Diagram */}
+          <div className="md:w-1/2 flex items-center justify-center">
+            <div className="relative w-[340px] h-[340px] md:w-[400px] md:h-[400px]">
+              {/* Center Hexagon */}
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-32 h-32 md:w-36 md:h-36 bg-teal-400 text-white flex items-center justify-center font-bold text-lg md:text-xl rounded-[18%] shadow-lg border-4 border-white z-10" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Aid-To-Trade
+                </div>
+              </div>
+              {/* Surrounding Hexagons */}
+              {/* Top */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-0">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Proper Protection
+                </div>
+              </div>
+              {/* Top Right */}
+              <div className="absolute right-0 top-[18%]">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Quality Leadership
+                </div>
+              </div>
+              {/* Bottom Right */}
+              <div className="absolute right-0 bottom-[18%]">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Locally-Led Initiatives
+                </div>
+              </div>
+              {/* Bottom */}
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-0">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Access to Capital
+                </div>
+              </div>
+              {/* Bottom Left */}
+              <div className="absolute left-0 bottom-[18%]">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Market-Based Solutions
+                </div>
+              </div>
+              {/* Top Left */}
+              <div className="absolute left-0 top-[18%]">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                  Sustainable Growth
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
    
       <section className="grid grid-cols-1 md:grid-cols-2">
