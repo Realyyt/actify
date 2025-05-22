@@ -342,7 +342,7 @@ export default function WhoWeAre() {
                   Market-Based Solutions
                 </div>
               </div>
-              {/* Top Left */}
+              {/* Top Left corner*/}
               <div className="absolute left-0 top-[18%]">
                 <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Sustainable Growth
