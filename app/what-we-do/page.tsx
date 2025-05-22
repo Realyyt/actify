@@ -142,7 +142,7 @@ export default function WhatWeDo() {
             We collaborate with governments, businesses, and institutions to transform aid into opportunity, aligning global resources with local leadership to deliver lasting impact. Development must be owned, driven, and sustained by communities—not just received.
           </p>
           <p className="text-2xl font-bold text-teal-700 italic bg-white/80 rounded-xl px-6 py-4 inline-block shadow-md">
-            At IDG, Aid to Trade is more than a strategy; it&lsquo;s a commitment to lasting change.
+            At IDG, Aid-To-Trade is more than a strategy; it&lsquo;s a commitment to lasting change.
           </p>
         </div>
       </section>
