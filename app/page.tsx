@@ -38,7 +38,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
         <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white z-10 px-4 tracking-wide">
-          Empowering families and communities to<br />shape their own futures
+          Empowering families and communities to<br />shape their own future
         </h1>
       </div>
 
