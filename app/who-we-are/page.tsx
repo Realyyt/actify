@@ -304,47 +304,47 @@ export default function WhoWeAre() {
           </div>
           {/* Right: Hexagon Diagram */}
           <div className="md:w-1/2 flex items-center justify-center">
-            <div className="relative w-[340px] h-[340px] md:w-[400px] md:h-[400px]">
+            <div className="relative w-[440px] h-[440px] md:w-[520px] md:h-[520px]">
               {/* Center Hexagon */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-32 h-32 md:w-36 md:h-36 bg-teal-400 text-white flex items-center justify-center font-bold text-lg md:text-xl rounded-[18%] shadow-lg border-4 border-white z-10" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                <div className="w-48 h-48 md:w-56 md:h-56 bg-teal-400 text-white flex items-center justify-center font-bold text-xl md:text-2xl rounded-[18%] shadow-lg border-4 border-white z-10 text-center px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Aid-To-Trade
                 </div>
               </div>
               {/* Surrounding Hexagons */}
               {/* Top */}
               <div className="absolute left-1/2 -translate-x-1/2 top-0">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Proper Protection
                 </div>
               </div>
               {/* Top Right */}
-              <div className="absolute right-0 top-[18%]">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+              <div className="absolute right-0 top-[14%]">
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Quality Leadership
                 </div>
               </div>
               {/* Bottom Right */}
-              <div className="absolute right-0 bottom-[18%]">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+              <div className="absolute right-0 bottom-[14%]">
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Locally-Led Initiatives
                 </div>
               </div>
               {/* Bottom */}
               <div className="absolute left-1/2 -translate-x-1/2 bottom-0">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Access to Capital
                 </div>
               </div>
               {/* Bottom Left */}
-              <div className="absolute left-0 bottom-[18%]">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+              <div className="absolute left-0 bottom-[14%]">
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Market-Based Solutions
                 </div>
               </div>
               {/* Top Left corner*/}
-              <div className="absolute left-0 top-[18%]">
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
+              <div className="absolute left-0 top-[14%]">
+                <div className="w-36 h-36 md:w-40 md:h-40 bg-rose-200 text-navy-800 flex items-center justify-center text-center font-medium rounded-[18%] shadow border border-rose-100 text-base md:text-lg px-2" style={{clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)'}}>
                   Sustainable Growth
                 </div>
               </div>
