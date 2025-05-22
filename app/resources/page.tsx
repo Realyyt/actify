@@ -6,15 +6,15 @@ import { useState } from "react"
 import Link from "next/link"
 
 // Define the resource type
-type Resource = {
-  id: number
-  title: string
-  type: string
-  category: string[]
-  thumbnail: string
-  downloadUrl?: string
-  videoUrl?: string
-}
+// type Resource = {
+//   id: number
+//   title: string
+//   type: string
+//   category: string[]
+//   thumbnail: string
+//   downloadUrl?: string
+//   videoUrl?: string
+// }
 
 export default function Resources() {
   // State for the selected category
@@ -96,7 +96,7 @@ export default function Resources() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-3">Coming Soon</h3>
                   <p className="text-gray-600 max-w-md">
-                    We're working hard to bring you valuable resources and materials. Stay tuned for updates!
+                    We&apos;re working hard to bring you valuable resources and materials. Stay tuned for updates!
                   </p>
                 </div>
               </div>
