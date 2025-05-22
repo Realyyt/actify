@@ -12,8 +12,8 @@ export default function OurProgramProductsPage() {
   const programSections = [
     {
       id: 'protection',
-      title: 'Scaling Personal Protection for Economic Resilience',
-      content: 'Expanding health and life insurance fosters financial stability, risk mitigation, and sustainable development. Accessible coverage protects individuals and businesses from crises while enhancing market confidence, investment, and workforce productivity. Governments and institutions benefit from reduced reliance on aid, enabling a shift toward self-sufficiency and long-term prosperity. Integrating personal protection into Aid to Trade empowers communities, secures livelihoods, and strengthens economic resilience.',
+      title: 'Scaling Proper Protection for Economic Resilience',
+      content: 'Expanding health and life insurance fosters financial stability, risk mitigation, and sustainable development. Accessible coverage protects individuals and businesses from crises while enhancing market confidence, investment, and workforce productivity. Governments and institutions benefit from reduced reliance on aid, enabling a shift toward self-sufficiency and long-term prosperity. Integrating proper protection into Aid-To-Trade empowers communities, secures livelihoods, and strengthens economic resilience.',
       icon: Shield
     },
     {
@@ -25,7 +25,7 @@ export default function OurProgramProductsPage() {
     {
       id: 'development',
       title: 'Locally-Led Development: A Shift Toward True Partnership',
-      content: 'Sustainable development thrives when countries and communities take ownership of their futures. At IDG, Locally-Led Development is central to Aid to Trade, ensuring decision-making power and resources remain with national governments, community leaders, and local institutions. By fostering market-based solutions, entrepreneurship, and economic opportunity, we transform aid into self-sufficiency, resilience, and long-term growth – making Aid to Trade a reality, not just a concept.',
+      content: 'Sustainable development thrives when countries and communities take ownership of their futures. At IDG, Locally-Led Development is central to Aid-To-Trade, ensuring decision-making power and resources remain with national governments, community leaders, and local institutions. By fostering market-based solutions, entrepreneurship, and economic opportunity, we transform aid into self-sufficiency, resilience, and long-term growth – making Aid-To-Trade a reality, not just a concept.',
       icon: Building2
     },
     {
