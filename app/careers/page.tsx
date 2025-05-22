@@ -63,7 +63,7 @@ export default function WhatWeDo() {
             {/* Position Cards */}
             {[
               {
-                title: "Aid to Trade Strategy Consultant",
+                title: "Aid-To-Trade Strategy Consultant",
                 responsibilities: [
                   "Develop and refine strategies to transition aid programs into long-term trade and economic initiatives.",
                   "Conduct research on global trade frameworks and economic resilience models.",
