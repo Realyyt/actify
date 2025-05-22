@@ -123,7 +123,7 @@ export default function WhoWeAre() {
 
               <div className="mt-8 text-center relative z-10">
                 <p className="text-gray-700 text-lg italic">
-                  True development requires bold leadership, local engagement, and systems that sustain impact beyond aid dependency. Aid-To-Trade is how we turn assistance into opportunity—ensuring communities lead, markets thrive, and solutions endure.
+                  True development requires bold leadership, local engagement, and systems that sustain impact beyond aid dependency.Aid-To-Trade is how we turn assistance into opportunity—ensuring communities lead, markets thrive, and solutions endure.
                 </p>
               </div>
             </div>
