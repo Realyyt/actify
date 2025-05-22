@@ -38,7 +38,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
         <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white z-10 px-4 tracking-wide">
-          Empowering families and communities to<br />shape their own future
+          Empowering businesses,families and communities to<br />shape their own future
         </h1>
       </div>
 
@@ -50,7 +50,10 @@ export default function Home() {
             <p className="text-gray-700 text-base sm:text-xl md:text-2xl mb-4 sm:mb-8 leading-relaxed">
               I was able to rebuild my life after a difficult loss—truly a lifeline during tough times.
             </p>
-            </div>
+            <p className="text-gray-700 text-base sm:text-xl md:text-2xl mt-4 sm:mt-8 leading-relaxed">
+              - Emily Johnson
+            </p>
+          </div>
           <div className="text-teal-500 text-4xl sm:text-5xl md:text-7xl self-start">&rdquo;</div>
         </div>
       </div>
@@ -84,7 +87,7 @@ export default function Home() {
               className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'sales' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
               onClick={() => setActiveSection('sales')}
             >
-              <h2 className="text-xl sm:text-2xl">For Our Agents</h2>
+              <h2 className="text-xl sm:text-2xl">For Our Providers </h2>
             </div>
             <div 
               className={`w-full sm:w-1/3 py-6 sm:py-10 px-4 cursor-pointer transition-colors ${activeSection === 'technology' ? 'bg-white/90 text-blue-900 font-bold' : 'bg-black/30 text-white hover:bg-black/40'}`}
@@ -116,9 +119,9 @@ export default function Home() {
                 <div className="mb-4 sm:mb-8">
                   <Handshake className="w-12 h-12 sm:w-16 sm:h-16 mx-auto" />
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">AGENTS</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-10 font-bold tracking-wide">Providers</h2>
                 <p className="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl leading-relaxed">
-                  Our team is committed to <strong>supporting your success</strong> and fostering <strong>strong partnerships</strong> with our agents.
+                  Our team is committed to <strong>supporting your success</strong> and fostering <strong>strong partnerships</strong> with our providers.
                 </p>
                 
               </div>
@@ -209,7 +212,7 @@ export default function Home() {
         </div>
       </div>*/}
 
-      {/* By the Numbers Section */}
+      {/* By the Numbers Section 
       <div className="py-32 text-center bg-white">
         <h2 className="text-blue-900 text-3xl mb-16 font-bold tracking-wide">            <h1 className="text-3xl font-bold text-white hover:text-teal-400 transition-colors">Impact Delivery Group</h1>
         BY THE NUMBERS</h2>
@@ -222,13 +225,13 @@ export default function Home() {
             <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 sm:mt-2">SALES</div>
           </div>
         </div>
-      </div>
+      </div>*/}
 
       {/* Contact and Join Team Section */}
       <div className="flex flex-row w-full">
         <div className="bg-teal-500 text-white p-12 flex justify-center items-center w-full">
           <Link href="/contact-us" className="text-xl font-bold flex items-center">
-          Get Help from a Licensed Insurance Provider <ArrowRight className="inline-block ml-2" />
+          Get Help from a qualified provider <ArrowRight className="inline-block ml-2" />
           </Link>
         </div>
       </div>

@@ -67,10 +67,7 @@ export default function Footer() {
         <p className="text-center mb-8 text-gray-400">© 2025 Impact Delivery Group LLC. ALL RIGHTS RESERVED.</p>
         <div className="flex justify-center flex-wrap gap-x-8 gap-y-4 text-sm">
           <Link href="/privacy-policy" className="hover:underline">Privacy Notice</Link>
-          <div className="flex items-center">
-            <Link href="/privacy-choices" className="hover:underline">Your Privacy Choices</Link>
-            <ShieldCheck className="w-4 h-4 ml-1" />
-          </div>
+          
         </div>
       </div>
     </footer>

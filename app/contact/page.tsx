@@ -92,7 +92,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center max-w-4xl px-4 space-y-4 md:space-y-8">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Join the Movement: Aid to Trade for Lasting Prosperity
+            Join the Movement: Aid-To-Trade for Lasting Prosperity
           </h1>
           <p className="text-lg md:text-xl text-white">
             IDG is transforming development by shifting aid into market-driven, locally-led solutions that foster economic independence, sustainable growth, and resilient communities. By empowering leaders, strengthening systems, and aligning priorities, we ensure aid leads to long-term opportunity, not dependency. Join us in building a future where trade drives prosperity and development creates lasting impact.

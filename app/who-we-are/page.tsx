@@ -58,7 +58,7 @@ export default function WhoWeAre() {
             <div className="text-center mb-12">
               <span className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-1 rounded-full">OUR APPROACH</span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mt-4 mb-6">
-              Aid-To-Trade: Advancing Proper Protection, Quality Leadership, Locally-led initiatives,Access to capital, Market-Based Solutions and Sustainable Growth
+              Aid-To-Trade: Advancing Proper Protection, Quality Leadership, Locally-led initiatives, Access to Capital, Market-Based Solutions and Sustainable Growth
               </h2>
               <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
             </div>
@@ -68,7 +68,7 @@ export default function WhoWeAre() {
               <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-100 rounded-full -ml-20 -mb-20 opacity-50"></div>
               
               <p className="text-gray-700 text-lg mb-8 relative z-10">
-                At Impact Delivery Group , Aid-To-Trade is more than a model—it&lsquo;s a strategy for long-term economic independence. By integrating personal protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
+                At Impact Delivery Group , Aid-To-Trade is more than a model—it&lsquo;s a strategy for long-term economic independence. By integrating proper protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 relative z-10">

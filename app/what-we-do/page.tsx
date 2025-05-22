@@ -55,7 +55,7 @@ export default function WhatWeDo() {
             <span className="inline-block w-24 h-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500"></span>
           </div>
           <p className="text-xl md:text-2xl text-gray-700 font-semibold mb-8 drop-shadow-lg bg-white/70 rounded-xl px-6 py-4 inline-block shadow-lg">
-            At Impact Delivery Group , we turn aid into trade by fostering economic independence through personal protection, quality leadership,locally-led initiatives,market-based solutions,access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
+            At Impact Delivery Group, we turn aid into trade by fostering economic independence through proper protection, quality leadership, locally-led initiatives, market-based solutions, access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
           </p>
         </div>
       </section>
