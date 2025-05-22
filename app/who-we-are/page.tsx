@@ -6,7 +6,7 @@ import Navbar from "../components/navbar"
 
 export default function WhoWeAre() {
   const heroTexts = [
-    "At Impact Delivery Group,innovation and empowerment take center stage.",
+    "At Impact Delivery Group, innovation and empowerment take center stage.",
   ];
   const [currentIdx, setCurrentIdx] = useState(0);
   const [show, setShow] = useState(true);
