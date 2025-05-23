@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Linkedin, Instagram, ShieldCheck } from 'lucide-react';
+import { Facebook, Linkedin, Instagram,  } from 'lucide-react';
 
 export default function Footer() {
   return (

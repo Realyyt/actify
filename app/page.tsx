@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { 
-  Phone, 
+  
   Megaphone, 
   Handshake, 
   Cpu, 
