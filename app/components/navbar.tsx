@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="flex flex-col px-8 py-6 max-w-7xl mx-auto w-full">
         <div className="flex justify-between items-center">
           <div className="logo">
-            <h1 className="text-3xl font-bold text-white hover:text-teal-400 transition-colors">Impact Delivery Group</h1>
+            <img src="/idg.png" alt="Impact Delivery Group Logo" className="h-8 w-auto" />
           </div>
           
           <button 
