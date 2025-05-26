@@ -130,7 +130,7 @@ export default function Contact() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="font-bold text-gray-900 mb-2">Impact Delivery Group, LLC</h3>
                 <p className="text-gray-700">1457 Kelly Road, #245</p>
-                <p className="text-gray-700">Apex, NC 27502</p>
+                <p className="text-gray-700">Apex, NC 27502 USA</p>
               </div>
             </div>
 

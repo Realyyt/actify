@@ -49,12 +49,12 @@ export default function Navbar() {
             <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
              What We Do, Our Approach, Why It Matters
             </Link>
-              {/* <a href="https://idginsuranceagency.impactdeliverygroup.com" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+              <a href="https://idginsuranceagency.impactdeliverygroup.com" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Our Insurance Products
-            </a>*/}
-            <Link href="/our-program-products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+            </a>
+            {/*<Link href="/our-program-products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Our Program Products
-            </Link>
+            </Link>*/}
             <Link href="/resources" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
               Digital Resource Library
             </Link>
