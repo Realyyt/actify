@@ -32,7 +32,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/home.mp4" type="video/mp4" />
+            <source src="/11.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -68,7 +68,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/home2.mp4" type="video/mp4" />
+            <source src="/22.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black opacity-40"></div>
