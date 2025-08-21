@@ -62,7 +62,14 @@ export default function Contact() {
         body: JSON.stringify(formData)
       })
 
-      const result = await response.json()
+      // Handle both JSON and non-JSON responses safely
+      const rawBody = await response.text()
+      let result: any
+      try {
+        result = rawBody ? JSON.parse(rawBody) : {}
+      } catch {
+        result = { success: false, message: rawBody }
+      }
 
       if (result.success) {
         setFormResponse({ success: true, message: result.message })
@@ -77,7 +84,8 @@ export default function Contact() {
         }
         setFormState(newFormState)
       } else {
-        setFormResponse({ success: false, message: result.message })
+        const details = typeof result?.details === 'string' ? `\nDetails: ${result.details}` : ''
+        setFormResponse({ success: false, message: (result?.message || 'Failed to send message.') + details })
       }
     } catch (error) {
       console.error("Form submission error:", error)
