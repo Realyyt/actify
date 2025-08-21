@@ -7,7 +7,7 @@ import { useState } from "react"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
 import { ChevronDown,  Loader2 } from "lucide-react"
-import { submitContactForm } from "../actions/contact-form"
+// import { submitContactForm } from "../actions/contact-form"
 
 // Form field type
 type FormField = {
@@ -54,22 +54,30 @@ export default function Contact() {
     }
 
     try {
-      const response = await submitContactForm(formData)
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
 
-      if (response.success) {
-        setFormResponse({ success: true, message: response.message })
+      const result = await response.json()
+
+      if (result.success) {
+        setFormResponse({ success: true, message: result.message })
         setFormState(initialFormState)
-      } else if (response.fieldErrors) {
+      } else if (result.fieldErrors) {
         const newFormState = { ...formState }
-        for (const [field, error] of Object.entries(response.fieldErrors)) {
+        for (const [field, error] of Object.entries(result.fieldErrors)) {
           newFormState[field] = {
             value: formState[field]?.value || "",
-            error,
+            error: error as string,
           }
         }
         setFormState(newFormState)
       } else {
-        setFormResponse({ success: false, message: response.message })
+        setFormResponse({ success: false, message: result.message })
       }
     } catch (error) {
       console.error("Form submission error:", error)

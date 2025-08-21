@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Handle Next.js routing and server actions
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Specific handling for server actions
+[[redirects]]
+  from = "/contact-us"
+  to = "/api/contact"
+  status = 200
+  force = true
