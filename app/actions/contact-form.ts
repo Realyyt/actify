@@ -28,7 +28,7 @@ export async function submitContactForm(formData: FormData) {
       },
       to: [
         {
-          email: "farm360ng@gmail.com", // Replace with your recipient email
+          email: "farm360ng@gmail.com", //replace with your recipient email
           name: "actify Contact"
         }
       ],
