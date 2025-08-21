@@ -15,6 +15,14 @@ type FormField = {
   error?: string
 }
 
+// API response shape for contact submission
+type ContactAPIResult = {
+  success?: boolean
+  message?: string
+  fieldErrors?: Record<string, string>
+  details?: unknown
+}
+
 // Initial form state
 const initialFormState = {
   fullName: { value: "" },
@@ -64,7 +72,7 @@ export default function Contact() {
 
       // Handle both JSON and non-JSON responses safely
       const rawBody = await response.text()
-      let result: any
+      let result: ContactAPIResult
       try {
         result = rawBody ? JSON.parse(rawBody) : {}
       } catch {
