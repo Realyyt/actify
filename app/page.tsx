@@ -230,7 +230,7 @@ export default function Home() {
       {/* Contact and Join Team Section */}
       <div className="flex flex-row w-full">
         <div className="bg-teal-500 text-white p-12 flex justify-center items-center w-full">
-          <Link href="/contact-us" className="text-xl font-bold flex items-center">
+          <Link href="/contact" className="text-xl font-bold flex items-center">
           Get Help from a qualified provider <ArrowRight className="inline-block ml-2" />
           </Link>
         </div>
