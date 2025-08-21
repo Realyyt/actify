@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { Resend } from 'resend'
 
 // Ensure this route runs on the Node.js runtime (not Edge)
 export const runtime = 'nodejs'
@@ -27,79 +28,52 @@ export async function POST(request: NextRequest) {
     // Validate form data
     const validatedData = formSchema.parse(body)
 
-    const apiKey = getEnv('BREVO_API_KEY')
-    // Fallbacks to the values that worked locally
-    const senderEmail = getEnv('BREVO_SENDER_EMAIL', 'farm360ng@gmail.com')
-    const senderName = getEnv('BREVO_SENDER_NAME', 'actify Website')
-    const toEmail = getEnv('BREVO_TO_EMAIL', 'farm360ng@gmail.com')
+    // Resend configuration
+    const apiKey = getEnv('RESEND_API_KEY')
+    const from = getEnv('RESEND_FROM', 'Impact Delivery Group <onboarding@resend.dev>')
+    const to = getEnv('RESEND_TO', 'wecanhelp@impactdeliverygroup.com')
 
     if (!apiKey) {
       return NextResponse.json(
-        { success: false, message: 'Email service not configured. Missing BREVO_API_KEY.' },
+        { success: false, message: 'Email service not configured. Missing RESEND_API_KEY.' },
         { status: 500 }
       )
     }
 
-    // Prepare the API request to Brevo
-    const url = 'https://api.brevo.com/v3/smtp/email'
+    const resend = new Resend(apiKey)
 
-    const data = {
-      sender: {
-        name: senderName,
-        email: senderEmail,
-      },
-      to: [
-        {
-          email: toEmail,
-          name: 'actify Contact',
-        },
-      ],
-      replyTo: {
-        email: validatedData.email,
-        name: validatedData.fullName,
-      },
+    const html = `
+      <html>
+        <body>
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${validatedData.fullName}</p>
+          <p><strong>Email:</strong> ${validatedData.email}</p>
+          <p><strong>Phone:</strong> ${validatedData.phone || 'Not provided'}</p>
+          <p><strong>Topic:</strong> ${validatedData.topic}</p>
+          <p><strong>Message:</strong></p>
+          <p>${validatedData.message.replace(/\n/g, '<br>')}</p>
+        </body>
+      </html>
+    `
+
+    const fromAddress: string = from || 'Impact Delivery Group <onboarding@resend.dev>'
+    const toAddress: string = to || 'wecanhelp@impactdeliverygroup.com'
+
+    const { data, error } = await resend.emails.send({
+      from: fromAddress,
+      to: [toAddress],
       subject: `Contact Form: ${validatedData.topic}`,
-      htmlContent: `
-        <html>
-          <body>
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${validatedData.fullName}</p>
-            <p><strong>Email:</strong> ${validatedData.email}</p>
-            <p><strong>Phone:</strong> ${validatedData.phone || 'Not provided'}</p>
-            <p><strong>Topic:</strong> ${validatedData.topic}</p>
-            <p><strong>Message:</strong></p>
-            <p>${validatedData.message.replace(/\n/g, '<br>')}</p>
-          </body>
-        </html>
-      `,
-    }
-
-    // Send the email using Brevo API
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'api-key': apiKey,
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(data),
+      html,
+      replyTo: validatedData.email,
     })
 
-    if (!response.ok) {
-      // Brevo sometimes returns non-JSON error bodies; fall back to text
-      let errorBody: unknown
-      try {
-        errorBody = await response.json()
-      } catch {
-        errorBody = await response.text()
-      }
-
+    if (error) {
       return NextResponse.json(
         {
           success: false,
           message:
-            'Email sending failed. Verify API key, and that the sender email is verified in Brevo.',
-          details: typeof errorBody === 'string' ? errorBody : (errorBody as Record<string, unknown>),
+            'Email sending failed. Verify your Resend API key, from address, and domain verification.',
+          details: error,
         },
         { status: 502 }
       )
@@ -108,6 +82,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Your message has been sent successfully! We will get back to you soon.',
+      // optionally include id: data?.id
     })
   } catch (error) {
     if (error instanceof z.ZodError) {
