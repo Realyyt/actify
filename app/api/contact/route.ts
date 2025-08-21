@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     const fromAddress: string = from || 'Impact Delivery Group <onboarding@resend.dev>'
     const toAddress: string = to || 'wecanhelp@impactdeliverygroup.com'
 
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: fromAddress,
       to: [toAddress],
       subject: `Contact Form: ${validatedData.topic}`,
