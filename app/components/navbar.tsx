@@ -1,80 +1,149 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => pathname === path;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-blue-900 shadow-lg">
-      <div className="flex flex-col px-8 py-6 max-w-7xl mx-auto w-full">
-        <div className="flex justify-between items-center">
-          <div className="logo">
-            <img src="/idg.png" alt="Impact Delivery Group Logo" className="h-8 w-auto" />
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2">
+              <img src="/idg.png" alt="Impact Delivery Group Logo" className="h-10 w-auto" />
+            </Link>
           </div>
           
-          <button 
-            onClick={toggleMenu} 
-            className="text-white hover:text-teal-400 transition-colors z-50"
-          >
-            <div className="relative w-8 h-8">
-              <Menu className={`absolute w-8 h-8 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-            </div>
-          </button>
-        </div>
-
-        {/* Sidebar Menu */}
-        <div className={`fixed inset-y-0 right-0 w-80 bg-blue-900 shadow-2xl transform transition-transform duration-300 ease-in-out z-40
-          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col p-8 space-y-6">
-            <div className="flex justify-end">
-              <button 
-                onClick={toggleMenu} 
-                className="text-white hover:text-teal-400 transition-colors mb-8"
-              >
-                <X className="w-8 h-8" />
-              </button>
-            </div>
-            <Link href="/" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-10">
+            <Link 
+              href="/" 
+              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                isActive('/') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
               Home
             </Link>
-            <Link href="/who-we-are" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              About Us
+            <Link 
+              href="/who-we-are" 
+              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                isActive('/who-we-are') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Who We Are
             </Link>
-            <Link href="/what-we-do" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-             What We Do, Our Approach, Why It Matters
+            <Link 
+              href="/what-we-do" 
+              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                isActive('/what-we-do') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              What We Do
             </Link>
-              <a href="https://idginsuranceagency.impactdeliverygroup.com" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Our Insurance Products
-            </a>
-            {/* <Link href="/our-program-products" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Our Program Products
-            </Link>*/}
-            <Link href="/resources" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
-              Digital Resource Library
+            <Link 
+              href="/capabilities" 
+              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                isActive('/capabilities') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Capabilities
             </Link>
-            <Link href="/careers" className="text-white text-lg hover:text-teal-400 transition-colors py-2 border-b border-blue-800" onClick={toggleMenu}>
+            <Link 
+              href="/careers" 
+              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                isActive('/careers') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
               Careers
             </Link>
-            <Link href="/contact" className="text-white text-lg hover:text-teal-400 transition-colors py-2" onClick={toggleMenu}>
-              Contact
+            <Link 
+              href="/contact" 
+              className="bg-gray-900 text-white text-sm font-medium uppercase tracking-wider px-6 py-2.5 hover:bg-gray-800 transition-colors duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMenu} 
+            className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="px-4 py-6 space-y-4">
+            <Link 
+              href="/" 
+              className={`block text-base font-medium uppercase tracking-wider ${
+                isActive('/') ? 'text-gray-900' : 'text-gray-600'
+              }`} 
+              onClick={toggleMenu}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/who-we-are" 
+              className={`block text-base font-medium uppercase tracking-wider ${
+                isActive('/who-we-are') ? 'text-gray-900' : 'text-gray-600'
+              }`} 
+              onClick={toggleMenu}
+            >
+              Who We Are
+            </Link>
+            <Link 
+              href="/what-we-do" 
+              className={`block text-base font-medium uppercase tracking-wider ${
+                isActive('/what-we-do') ? 'text-gray-900' : 'text-gray-600'
+              }`} 
+              onClick={toggleMenu}
+            >
+              What We Do
+            </Link>
+            <Link 
+              href="/capabilities" 
+              className={`block text-base font-medium uppercase tracking-wider ${
+                isActive('/capabilities') ? 'text-gray-900' : 'text-gray-600'
+              }`} 
+              onClick={toggleMenu}
+            >
+              Capabilities
+            </Link>
+            <Link 
+              href="/careers" 
+              className={`block text-base font-medium uppercase tracking-wider ${
+                isActive('/careers') ? 'text-gray-900' : 'text-gray-600'
+              }`} 
+              onClick={toggleMenu}
+            >
+              Careers
+            </Link>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-gray-900 text-white text-sm font-medium uppercase tracking-wider px-6 py-2.5 hover:bg-gray-800 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Contact Us
             </Link>
           </div>
         </div>
-
-        {/* Overlay */}
-        {isMenuOpen && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-30" 
-            onClick={toggleMenu}
-          />
-        )}
-      </div>
+      )}
     </nav>
   );
 }
