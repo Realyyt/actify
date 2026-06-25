@@ -1,6 +1,6 @@
 "use client";
 import InquiryModal from '../shared/InquiryModal';
-import { Handshake, Megaphone, Lightbulb, Users, Briefcase, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

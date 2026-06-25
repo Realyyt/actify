@@ -111,7 +111,7 @@ export default function Contact() {
             Get In Touch
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            Reach out to the Impact Delivery Group team. We'll respond within 2 business days.
+            Reach out to the Impact Delivery Group team. We&apos;ll respond within 2 business days.
           </p>
         </div>
       </section>

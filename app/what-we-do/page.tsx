@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
-import { Shield, Users, Globe2, Wallet, Briefcase, BarChart2, ArrowRight } from "lucide-react"
+
 
 export default function WhatWeDo() {
   return (
@@ -55,7 +55,7 @@ export default function WhatWeDo() {
               </div>
               <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 02</p>
-                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">The 'Aid-to-Trade' Model</h3>
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">The &apos;Aid-to-Trade&apos; Model</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
                   We help systems move away from constant dependence on aid and toward profitable trade and local fund generation. By connecting local services with business opportunities, we give communities the power to use their own talents and achieve real independence.
                 </p>
@@ -66,7 +66,7 @@ export default function WhatWeDo() {
                 <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 03</p>
                 <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Constant Improvement</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Lasting impact requires constant practice and refinement. We build regular, simple data checks directly into your team's daily routines. By continually reviewing work habits and fixing gaps, we keep your systems flexible, legal, and highly efficient as things change.
+                  Lasting impact requires constant practice and refinement. We build regular, simple data checks directly into your team&apos;s daily routines. By continually reviewing work habits and fixing gaps, we keep your systems flexible, legal, and highly efficient as things change.
                 </p>
               </div>
               <div className="aspect-[4/3] md:aspect-square overflow-hidden">
@@ -83,7 +83,7 @@ export default function WhatWeDo() {
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">01</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Reviewing Daily Operations</h3>
-                  <p className="text-gray-600 leading-relaxed">We perform clear, step-by-step lookovers of how your organization works, ensuring your staff's daily habits truly line up with your big-picture goals.</p>
+                  <p className="text-gray-600 leading-relaxed">We perform clear, step-by-step lookovers of how your organization works, ensuring your staff&apos;s daily habits truly line up with your big-picture goals.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
@@ -95,7 +95,7 @@ export default function WhatWeDo() {
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">03</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Designing Practical Solutions</h3>
-                  <p className="text-gray-600 leading-relaxed">We create practical, evidence-backed roadmaps that fit your team's budget and daily reality, completely focused on making things better.</p>
+                  <p className="text-gray-600 leading-relaxed">We create practical, evidence-backed roadmaps that fit your team&apos;s budget and daily reality, completely focused on making things better.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">

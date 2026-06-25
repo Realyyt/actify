@@ -36,7 +36,7 @@ export default function WhoWeAre() {
               At Impact Delivery Group (IDG), we believe the true success of any social or infrastructure development project is measured by what happens after the funding stops. Traditional aid models often keep vulnerable communities dependent on donations. We are here to change that.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
-              We are an expert consulting and implementation team that partners with governments, donors, and businesses to build strong, self-reliant communities. Led by experienced professionals and driven by clear, honest metrics, we turn temporary aid projects into permanent pathways for local growth and financial freedom. We don't just hand out relief; we build systems that stay strong for good.
+              We are an expert consulting and implementation team that partners with governments, donors, and businesses to build strong, self-reliant communities. Led by experienced professionals and driven by clear, honest metrics, we turn temporary aid projects into permanent pathways for local growth and financial freedom. We don&apos;t just hand out relief; we build systems that stay strong for good.
             </p>
           </div>
         </div>
