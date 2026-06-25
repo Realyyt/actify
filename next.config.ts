@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '2mb'
     },
   },
+  turbopack: {},
   // Ensure server actions work in production
   webpack: (config) => {
     config.experiments = {
