@@ -20,74 +20,24 @@ export default function WhoWeAre() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-6">Who We Are</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-6">ABOUT US</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
-              Innovation and empowerment take center stage.
+              Moving Beyond Relief. Building For Resilience.
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Aid to Trade Section */}
+      {/* About Us Content Section */}
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">Our Approach</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-                Aid-To-Trade: Advancing Proper Protection, Quality Leadership, Locally-led initiatives, Access to Capital, Market-Based Solutions and Sustainable Growth
-              </h2>
-            </div>
-            
-            <div className="mb-16">
-              <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-3xl mx-auto text-center">
-                At Impact Delivery Group, Aid-To-Trade is more than a model—it's a strategy for long-term economic independence. By integrating proper protection, quality leadership, market-driven solutions, and sustainable development, we ensure aid transitions into lasting trade opportunities.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">01</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Proper Protection</h3>
-                  <p className="text-gray-600">Safeguarding communities by ensuring equitable access to economic security, healthcare, and essential resources.</p>
-                </div>
-
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">02</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Quality Leadership</h3>
-                  <p className="text-gray-600">Strengthening governance and institutional efficiency by embedding delivery units within organizations, governments, and institutions to drive high-impact initiatives.</p>
-                </div>
-
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">03</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Local Ownership</h3>
-                  <p className="text-gray-600">Empowering communities as architects of their development futures – ensuring solutions reflect local needs, priorities, and expertise.</p>
-                </div>
-
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">04</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Access to Capital</h3>
-                  <p className="text-gray-600">Expanding financial access through government support, private investment and partnerships foster innovation, job creation and sustainable economic growth.</p>
-                </div>
-
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">05</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Market-Based Solutions</h3>
-                  <p className="text-gray-600">Investing in enterprise-driven models that foster self-sufficiency, private-sector growth, and economic resilience.</p>
-                </div>
-
-                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <p className="text-5xl font-light text-gray-300 mb-4">06</p>
-                  <h3 className="text-xl font-light text-gray-900 mb-3">Sustainable Growth</h3>
-                  <p className="text-gray-600">Moving beyond short-term aid by building stronger systems that enable leading prosperity through trade investment and innovation.</p>
-                </div>
-              </div>
-
-              <div className="mt-12 text-center">
-                <p className="text-gray-600 text-lg italic">
-                  True development requires bold leadership, local engagement, and systems that sustain impact beyond aid dependency. Aid-To-Trade is how we turn assistance into opportunity—ensuring communities lead, markets thrive, and solutions endure.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              At Impact Delivery Group (IDG), we believe the true success of any social or infrastructure development project is measured by what happens after the funding stops. Traditional aid models often keep vulnerable communities dependent on donations. We are here to change that.
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              We are an expert consulting and implementation team that partners with governments, donors, and businesses to build strong, self-reliant communities. Led by experienced professionals and driven by clear, honest metrics, we turn temporary aid projects into permanent pathways for local growth and financial freedom. We don't just hand out relief; we build systems that stay strong for good.
+            </p>
           </div>
         </div>
       </section>

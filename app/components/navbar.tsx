@@ -43,21 +43,21 @@ export default function Navbar() {
             >
               Who We Are
             </Link>
-            <Link 
-              href="/what-we-do" 
-              className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
-                isActive('/what-we-do') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              What We Do
-            </Link>
+            <Link
+            href="/what-we-do"
+            className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+              isActive('/what-we-do') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            OUR PILLARS & VISIBLE CAPABILITIES
+          </Link>
             <Link 
               href="/capabilities" 
               className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
                 isActive('/capabilities') ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Capabilities
+              Why This Matters
             </Link>
             <Link 
               href="/careers" 
@@ -107,23 +107,23 @@ export default function Navbar() {
             >
               Who We Are
             </Link>
-            <Link 
-              href="/what-we-do" 
+            <Link
+              href="/what-we-do"
               className={`block text-base font-medium uppercase tracking-wider ${
                 isActive('/what-we-do') ? 'text-gray-900' : 'text-gray-600'
-              }`} 
+              }`}
               onClick={toggleMenu}
             >
-              What We Do
+              OUR PILLARS & VISIBLE CAPABILITIES
             </Link>
             <Link 
               href="/capabilities" 
               className={`block text-base font-medium uppercase tracking-wider ${
                 isActive('/capabilities') ? 'text-gray-900' : 'text-gray-600'
-              }`} 
+              }`}
               onClick={toggleMenu}
             >
-              Capabilities
+              Why This Matters
             </Link>
             <Link 
               href="/careers" 

@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
-import { Shield, Users, Globe2, Wallet, Briefcase, BarChart2 } from "lucide-react"
+import { Shield, Users, Globe2, Wallet, Briefcase, BarChart2, ArrowRight } from "lucide-react"
 
 export default function WhatWeDo() {
   return (
@@ -16,9 +16,9 @@ export default function WhatWeDo() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-6">What We Do</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-6">OUR PILLARS & VISIBLE CAPABILITIES</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
-              Aid-To-Trade: Transforming assistance into economic independence and sustainable growth.
+              What We Do
             </h1>
           </div>
         </div>
@@ -27,96 +27,91 @@ export default function WhatWeDo() {
       {/* What We Do Section */}
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-              Our Approach: Aid-To-Trade Model
-            </h2>
+          <div className="max-w-3xl mx-auto mb-16">
             <p className="text-gray-600 text-lg leading-relaxed">
-              At Impact Delivery Group, we turn aid into trade by fostering economic independence through proper protection, quality leadership, locally-led initiatives, market-based solutions, access to capital and sustainable growth. We believe development must move beyond short-term assistance, ensuring communities lead, thrive, and build lasting prosperity.
+              We design, manage, and fix large-scale social services, utilities, governance programs, and infrastructure in developing markets. Instead of using rigid, one-size-fits-all plans, we build flexible systems designed to outlast short-term grants. Our services include long-term master planning, staff training, coordinating public-private partnerships, and providing strict program management.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <Shield size={32} />
+          {/* Our Three Pillars */}
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-12 text-center">Our Three Pillars</h2>
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Pillar 1 */}
+              <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
+                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 01</p>
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Leadership & Responsibility (The TQLA Framework)</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  We use clear, numbers-based management methods. This means assigning specific jobs to specific owners, cutting out wasted effort, and setting up open tracking systems that local citizens can see and trust.
+                </p>
               </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Proper Protection</h3>
-              <p className="text-gray-600">
-                Safeguarding economic security, healthcare access, and essential resources, ensuring individuals and communities have the foundation to grow and succeed.
-              </p>
-            </div>
+              <div className="aspect-[4/3] md:aspect-square overflow-hidden">
+                <img src="/boss.jpg" alt="Leadership & Responsibility" className="w-full h-full object-cover" />
+              </div>
 
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <Users size={32} />
+              {/* Pillar 2 */}
+              <div className="aspect-[4/3] md:aspect-square overflow-hidden">
+                <img src="/workc.jpg" alt="Aid-to-Trade Model" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Quality Leadership Through Delivery Units</h3>
-              <p className="text-gray-600">
-                Strengthening governance, institutions, and organizations by embedding highly skilled delivery units that drive mission-critical initiatives, enhance efficiency, and improve impact.
-              </p>
-            </div>
+              <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
+                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 02</p>
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">The 'Aid-to-Trade' Model</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  We help systems move away from constant dependence on aid and toward profitable trade and local fund generation. By connecting local services with business opportunities, we give communities the power to use their own talents and achieve real independence.
+                </p>
+              </div>
 
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <Globe2 size={32} />
+              {/* Pillar 3 */}
+              <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
+                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 03</p>
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Constant Improvement</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Lasting impact requires constant practice and refinement. We build regular, simple data checks directly into your team's daily routines. By continually reviewing work habits and fixing gaps, we keep your systems flexible, legal, and highly efficient as things change.
+                </p>
               </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Locally-Led Development & Ownership</h3>
-              <p className="text-gray-600">
-                Empowering communities as architects of their own futures, ensuring solutions are tailored to local priorities, shaped by regional expertise, and powered by shared investment.
-              </p>
-            </div>
-
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <Wallet size={32} />
+              <div className="aspect-[4/3] md:aspect-square overflow-hidden">
+                <img src="/lead.jpg" alt="Constant Improvement" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Access to Capital</h3>
-              <p className="text-gray-600">
-                Expanding financial access through government grants, private-sector investment and public-private partnerships foster innovation, job-creation and institutional growth.
-              </p>
-            </div>
-
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <Briefcase size={32} />
-              </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Market-Based Solutions</h3>
-              <p className="text-gray-600">
-                Investing in enterprise-driven models, collaborating with national governments, private corporations, and local institutions to create sustainable jobs, trade opportunities, and economic resilience.
-              </p>
-            </div>
-
-            <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-              <div className="text-gray-900 mb-4">
-                <BarChart2 size={32} />
-              </div>
-              <h3 className="text-xl font-light text-gray-900 mb-3">Sustainable Growth</h3>
-              <p className="text-gray-600">
-                Moving beyond aid dependency by building stronger systems, smarter investments, and scalable solutions, ensuring long-term prosperity through trade, innovation, and capital access.
-              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Why It Matters Section */}
-      <section className="py-20 md:py-32 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-8">
-              Why It Matters
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              The future of development lies in true partnership, where former aid recipient countries lead their own progress. By shifting the narrative from ongoing charity to investing in self-sufficiency, we ensure that aid builds resilience, fosters entrepreneurship, and strengthens local economies.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              We collaborate with governments, businesses, and institutions to transform aid into opportunity, aligning global resources with local leadership to deliver lasting impact. Development must be owned, driven, and sustained by communities—not just received.
-            </p>
-            <p className="text-gray-900 text-xl font-light italic">
-              At IDG, Aid-To-Trade is more than a strategy; it's a commitment to lasting change.
-            </p>
-          </div>
+          {/* How We Deliver Results */}
+          <section className="py-20 md:py-32 bg-gray-50 border-y border-gray-100 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-12 text-center">How We Deliver Results</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
+                  <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">01</p>
+                  <h3 className="text-xl font-light text-gray-900 mb-3">Reviewing Daily Operations</h3>
+                  <p className="text-gray-600 leading-relaxed">We perform clear, step-by-step lookovers of how your organization works, ensuring your staff's daily habits truly line up with your big-picture goals.</p>
+                </div>
+
+                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
+                  <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">02</p>
+                  <h3 className="text-xl font-light text-gray-900 mb-3">Finding Risks and Gaps</h3>
+                  <p className="text-gray-600 leading-relaxed">Our teams are highly skilled at finding hidden risks, costly delays, and confusing rules that slow your staff down or cause compliance errors.</p>
+                </div>
+
+                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
+                  <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">03</p>
+                  <h3 className="text-xl font-light text-gray-900 mb-3">Designing Practical Solutions</h3>
+                  <p className="text-gray-600 leading-relaxed">We create practical, evidence-backed roadmaps that fit your team's budget and daily reality, completely focused on making things better.</p>
+                </div>
+
+                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
+                  <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">04</p>
+                  <h3 className="text-xl font-light text-gray-900 mb-3">Step-by-Step Help</h3>
+                  <p className="text-gray-600 leading-relaxed">We do not just drop off advice; we work side by side with your team as they learn new ways of working, ensuring the shift is easy and permanent.</p>
+                </div>
+
+                <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
+                  <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">05</p>
+                  <h3 className="text-xl font-light text-gray-900 mb-3">Tracking Progress</h3>
+                  <p className="text-gray-600 leading-relaxed">We track real-time progress, evaluate whether changes are genuinely helping, and show your team how to make quick, ongoing adjustments to stay on track.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 

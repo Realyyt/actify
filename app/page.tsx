@@ -33,9 +33,8 @@ export default function Home() {
               <span className="font-semibold">Building Self-Reliant Systems.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-2xl">
-              We build strong, locally run public services, infrastructure networks, and economic frameworks
-              in emerging communities.
-            </p>
+             We build strong, locally run public services, infrastructure networks, and economic frameworks in emerging communities. By focusing on smart institutional planning, everyday process updates, and long-term business growth, we transform temporary charity projects into permanent, self-sufficient local systems.
+             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/what-we-do" 
