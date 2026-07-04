@@ -3,29 +3,39 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
+import { useState } from "react"
 
-export default function WhatWeDo() {
+export default function Careers() {
+  const [showMorePosition, setShowMorePosition] = useState<Record<string, boolean>>({});
+
+  const toggleShowMorePosition = (index: number) => {
+    setShowMorePosition(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
-    <div className="who-we-are-container">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar/>
-      <section className="relative h-[50vh] md:h-screen flex items-center justify-center">
+      <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/career.jpg"
+            src="/career112.jpg"
             alt="Careers Background"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 via-gray-900/60 to-gray-900/30"></div>
         </div>
-        <div className="relative z-10 text-center max-w-4xl px-4 space-y-4 md:space-y-8">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up">
-            YOU&apos;LL LOVE IT HERE
-          </h1>
-          <div className="relative inline-block">
-            <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-purple-600 blur opacity-75 animate-glow"></div>
-            <p className="relative text-lg md:text-2xl lg:text-3xl font-medium text-white bg-black/50 px-4 py-2 md:px-6 md:py-3 rounded-lg backdrop-blur-sm animate-fade-in-up delay-100">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-6">JOIN OUR TEAM</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
+              You&apos;ll Love It Here
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
               Let&apos;s build something meaningful together.
             </p>
           </div>
@@ -34,16 +44,16 @@ export default function WhatWeDo() {
 
       {/* Testimonial Section */}
       <div className="py-16 md:py-32 lg:py-48 flex justify-center bg-gray-50">
-        <div className="max-w-4xl flex border-l-4 border-r-4 border-teal-500 px-4 md:px-8 lg:px-12 mx-4">
-          <div className="text-teal-500 text-4xl md:text-5xl lg:text-7xl">&quot;</div>
+        <div className="max-w-4xl flex border-l-4 border-r-4 border-gray-900 px-4 md:px-8 lg:px-12 mx-4">
+          <div className="text-gray-900 text-4xl md:text-5xl lg:text-7xl">&quot;</div>
           <div className="px-4 md:px-6 lg:px-8 text-center">
             <p className="text-gray-700 text-base md:text-lg lg:text-xl xl:text-2xl mb-4 md:mb-6 lg:mb-8 leading-relaxed">
-              What makes this role truly fulfilling is witnessing the moment clients understand their coverage is in place and their loved ones are safeguarded.
+              What makes this work truly meaningful is seeing communities transition from aid dependence to sustainable trade and lasting economic independence.
             </p>
-            <p className="font-medium text-base md:text-lg">Sarah Thompson</p>
-            <p className="text-xs md:text-sm text-gray-600">Senior Insurance Consultant</p>
+            <p className="font-medium text-base md:text-lg">Amara Okafor</p>
+            <p className="text-xs md:text-sm text-gray-600">Aid-To-Trade Strategy Consultant</p>
           </div>
-          <div className="text-teal-500 text-4xl md:text-5xl lg:text-7xl self-start">&rdquo;</div>
+          <div className="text-gray-900 text-4xl md:text-5xl lg:text-7xl self-start">&rdquo;</div>
         </div>
       </div>
 
@@ -127,21 +137,33 @@ export default function WhatWeDo() {
                 ]
               }
             ].map((position, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:border-teal-500 transition-all duration-300">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:border-gray-900 transition-all duration-300 hover:shadow-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{position.title}</h3>
-                <ul className="space-y-2 mb-6">
-                  {position.responsibilities.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-teal-500 mr-2">•</span>
+                <ul className="space-y-2 mb-4">
+                  <li key={0} className="flex items-start">
+                    <span className="text-gray-900 mr-2">•</span>
+                    <span className="text-gray-700">{position.responsibilities[0]}</span>
+                  </li>
+                  {showMorePosition[index] && position.responsibilities.slice(1).map((item, idx) => (
+                    <li key={idx + 1} className="flex items-start">
+                      <span className="text-gray-900 mr-2">•</span>
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
                 </ul>
+                {position.responsibilities.length > 1 && (
+                  <button 
+                    onClick={() => toggleShowMorePosition(index)}
+                    className="text-gray-600 hover:text-gray-900 text-sm font-medium underline mb-4"
+                  >
+                    {showMorePosition[index] ? 'Show Less' : 'Read More'}
+                  </button>
+                )}
                 <div className="flex justify-between items-center">
-                  <Link href="/contact" className="text-teal-500 hover:text-teal-600 font-medium">
+                  <Link href="/contact" className="text-gray-900 hover:text-gray-600 font-bold border-b-2 border-gray-900 pb-1 hover:border-gray-600">
                     Learn More
                   </Link>
-                  <Link href="/contact" className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition-colors">
+                  <Link href="/contact" className="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-800 transition-all duration-300 font-bold uppercase tracking-wider hover:scale-105">
                     APPLY HERE
                   </Link>
                 </div>
@@ -166,18 +188,19 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2">
+      {/* CTA Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
         <Link
           href="/contact"
-          className="bg-teal-500 py-12 sm:py-16 md:py-20 flex items-center justify-center text-white font-bold tracking-wider text-lg sm:text-xl"
+          className="bg-gray-900 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-800 transition-all duration-300 group hover:scale-105"
         >
-          <span>CONTACT US &gt;</span>
+          <span className="text-xl font-bold tracking-widest uppercase">CONTACT US</span>
         </Link>
         <Link
           href="/careers"
-          className="bg-purple-800 py-12 sm:py-16 md:py-20 flex items-center justify-center text-white font-bold tracking-wider text-lg sm:text-xl"
+          className="bg-gray-800 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-700 transition-all duration-300 group hover:scale-105"
         >
-          <span>JOIN OUR TEAM &gt;</span>
+          <span className="text-xl font-bold tracking-widest uppercase">JOIN OUR TEAM</span>
         </Link>
       </section>
 

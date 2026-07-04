@@ -2,9 +2,15 @@
 import Link from "next/link"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
+import { useState } from "react"
 
 
 export default function WhatWeDo() {
+  const [showMoreIntro, setShowMoreIntro] = useState(false);
+  const [showMorePillar1, setShowMorePillar1] = useState(false);
+  const [showMorePillar2, setShowMorePillar2] = useState(false);
+  const [showMorePillar3, setShowMorePillar3] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
@@ -28,9 +34,18 @@ export default function WhatWeDo() {
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto mb-16">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We design, manage, and fix large-scale social services, utilities, governance programs, and infrastructure in developing markets. Instead of using rigid, one-size-fits-all plans, we build flexible systems designed to outlast short-term grants. Our services include long-term master planning, staff training, coordinating public-private partnerships, and providing strict program management.
-            </p>
+            <div className="text-gray-600 text-lg leading-relaxed">
+              <p>We design, manage, and fix large-scale social services, utilities, governance programs, and infrastructure in developing markets.</p>
+              {showMoreIntro && (
+                <p className="mt-4">Instead of using rigid, one-size-fits-all plans, we build flexible systems designed to outlast short-term grants. Our services include long-term master planning, staff training, coordinating public-private partnerships, and providing strict program management.</p>
+              )}
+              <button 
+                onClick={() => setShowMoreIntro(!showMoreIntro)}
+                className="text-gray-900 hover:text-gray-600 underline mt-4 text-sm font-medium"
+              >
+                {showMoreIntro ? 'Show Less' : 'Read More'}
+              </button>
+            </div>
           </div>
 
           {/* Our Three Pillars */}
@@ -40,10 +55,19 @@ export default function WhatWeDo() {
               {/* Pillar 1 */}
               <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 01</p>
-                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Leadership & Responsibility (The TQLA Framework)</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  We use clear, numbers-based management methods. This means assigning specific jobs to specific owners, cutting out wasted effort, and setting up open tracking systems that local citizens can see and trust.
-                </p>
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Leadership & Responsibility</h3>
+                <div className="text-gray-600 text-lg leading-relaxed">
+                  <p>We use clear, numbers-based management methods.</p>
+                  {showMorePillar1 && (
+                    <p className="mt-4">This means assigning specific jobs to specific owners, cutting out wasted effort, and setting up open tracking systems that local citizens can see and trust.</p>
+                  )}
+                  <button 
+                    onClick={() => setShowMorePillar1(!showMorePillar1)}
+                    className="text-gray-900 hover:text-gray-600 underline mt-4 text-sm font-medium"
+                  >
+                    {showMorePillar1 ? 'Show Less' : 'Read More'}
+                  </button>
+                </div>
               </div>
               <div className="aspect-[4/3] md:aspect-square overflow-hidden">
                 <img src="/boss.jpg" alt="Leadership & Responsibility" className="w-full h-full object-cover" />
@@ -56,18 +80,36 @@ export default function WhatWeDo() {
               <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 02</p>
                 <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">The &apos;Aid-to-Trade&apos; Model</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  We help systems move away from constant dependence on aid and toward profitable trade and local fund generation. By connecting local services with business opportunities, we give communities the power to use their own talents and achieve real independence.
-                </p>
+                <div className="text-gray-600 text-lg leading-relaxed">
+                  <p>We help systems move away from constant dependence on aid and toward profitable trade and local fund generation.</p>
+                  {showMorePillar2 && (
+                    <p className="mt-4">By connecting local services with business opportunities, we give communities the power to use their own talents and achieve real independence.</p>
+                  )}
+                  <button 
+                    onClick={() => setShowMorePillar2(!showMorePillar2)}
+                    className="text-gray-900 hover:text-gray-600 underline mt-4 text-sm font-medium"
+                  >
+                    {showMorePillar2 ? 'Show Less' : 'Read More'}
+                  </button>
+                </div>
               </div>
 
               {/* Pillar 3 */}
               <div className="p-10 md:p-16 bg-gray-50 flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Pillar 03</p>
                 <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-6">Constant Improvement</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Lasting impact requires constant practice and refinement. We build regular, simple data checks directly into your team&apos;s daily routines. By continually reviewing work habits and fixing gaps, we keep your systems flexible, legal, and highly efficient as things change.
-                </p>
+                <div className="text-gray-600 text-lg leading-relaxed">
+                  <p>Lasting impact requires constant practice and refinement.</p>
+                  {showMorePillar3 && (
+                    <p className="mt-4">We build regular, simple data checks directly into your team&apos;s daily routines. By continually reviewing work habits and fixing gaps, we keep your systems flexible, legal, and highly efficient as things change.</p>
+                  )}
+                  <button 
+                    onClick={() => setShowMorePillar3(!showMorePillar3)}
+                    className="text-gray-900 hover:text-gray-600 underline mt-4 text-sm font-medium"
+                  >
+                    {showMorePillar3 ? 'Show Less' : 'Read More'}
+                  </button>
+                </div>
               </div>
               <div className="aspect-[4/3] md:aspect-square overflow-hidden">
                 <img src="/lead.jpg" alt="Constant Improvement" className="w-full h-full object-cover" />
@@ -83,31 +125,31 @@ export default function WhatWeDo() {
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">01</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Reviewing Daily Operations</h3>
-                  <p className="text-gray-600 leading-relaxed">We perform clear, step-by-step lookovers of how your organization works, ensuring your staff&apos;s daily habits truly line up with your big-picture goals.</p>
+                  <p className="text-gray-600 leading-relaxed">We perform clear, step-by-step lookovers of how your organization works.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">02</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Finding Risks and Gaps</h3>
-                  <p className="text-gray-600 leading-relaxed">Our teams are highly skilled at finding hidden risks, costly delays, and confusing rules that slow your staff down or cause compliance errors.</p>
+                  <p className="text-gray-600 leading-relaxed">Our teams are highly skilled at finding hidden risks and costly delays.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">03</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Designing Practical Solutions</h3>
-                  <p className="text-gray-600 leading-relaxed">We create practical, evidence-backed roadmaps that fit your team&apos;s budget and daily reality, completely focused on making things better.</p>
+                  <p className="text-gray-600 leading-relaxed">We create practical, evidence-backed roadmaps that fit your team.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">04</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Step-by-Step Help</h3>
-                  <p className="text-gray-600 leading-relaxed">We do not just drop off advice; we work side by side with your team as they learn new ways of working, ensuring the shift is easy and permanent.</p>
+                  <p className="text-gray-600 leading-relaxed">We work side by side with your team as they learn new ways.</p>
                 </div>
 
                 <div className="p-8 border border-gray-200 hover:border-gray-400 transition-colors bg-white">
                   <p className="text-4xl md:text-5xl font-light text-gray-300 mb-4">05</p>
                   <h3 className="text-xl font-light text-gray-900 mb-3">Tracking Progress</h3>
-                  <p className="text-gray-600 leading-relaxed">We track real-time progress, evaluate whether changes are genuinely helping, and show your team how to make quick, ongoing adjustments to stay on track.</p>
+                  <p className="text-gray-600 leading-relaxed">We track real-time progress and show your team how to stay on track.</p>
                 </div>
               </div>
             </div>
@@ -119,15 +161,15 @@ export default function WhatWeDo() {
       <section className="grid grid-cols-1 md:grid-cols-2">
         <Link
           href="/contact"
-          className="bg-gray-900 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-800 transition-colors group"
+          className="bg-gray-900 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-800 transition-all duration-300 group hover:scale-105"
         >
-          <span className="text-xl font-light tracking-wider">CONTACT US</span>
+          <span className="text-xl font-bold tracking-widest uppercase">CONTACT US</span>
         </Link>
         <Link
           href="/careers"
-          className="bg-gray-800 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-700 transition-colors group"
+          className="bg-gray-800 py-16 md:py-24 flex items-center justify-center text-white hover:bg-gray-700 transition-all duration-300 group hover:scale-105"
         >
-          <span className="text-xl font-light tracking-wider">JOIN OUR TEAM</span>
+          <span className="text-xl font-bold tracking-widest uppercase">JOIN OUR TEAM</span>
         </Link>
       </section>
 

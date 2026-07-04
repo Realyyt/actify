@@ -48,9 +48,9 @@ export default function PathwayCards() {
               </li>
             </ul>
             <InquiryModal pathway={1}>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+                      <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all cursor-pointer border-b-2 border-gray-900 pb-1 hover:border-gray-600 hover:scale-105">
                         Improve Our Program
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-5 h-5" />
                       </span>
                     </InquiryModal>
           </div>
@@ -74,9 +74,9 @@ export default function PathwayCards() {
               </li>
             </ul>
             <InquiryModal pathway={2}>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+                      <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all cursor-pointer border-b-2 border-gray-900 pb-1 hover:border-gray-600 hover:scale-105">
                         Submit Inquiry
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-5 h-5" />
                       </span>
                     </InquiryModal>
           </div>
@@ -114,9 +114,9 @@ export default function PathwayCards() {
               </li>
             </ul>
             <InquiryModal pathway={3}>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+                      <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all cursor-pointer border-b-2 border-gray-900 pb-1 hover:border-gray-600 hover:scale-105">
                         Partner With Us
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-5 h-5" />
                       </span>
                     </InquiryModal>
           </div>
@@ -130,10 +130,10 @@ export default function PathwayCards() {
             </p>
             <Link 
               href="/who-we-are" 
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-white hover:text-gray-300 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white hover:text-gray-300 transition-all border-b-2 border-white pb-1 hover:border-gray-300 hover:scale-105"
             >
               Learn More
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
           <div className="aspect-[4/3 md:aspect-square overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
