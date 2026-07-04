@@ -2,6 +2,7 @@
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
 import { useState } from "react"
+import Link from 'next/link';
 
 export default function About() {
   const [showMorePhilosophy, setShowMorePhilosophy] = useState(false);
